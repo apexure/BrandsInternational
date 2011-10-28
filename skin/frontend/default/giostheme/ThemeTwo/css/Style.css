@@ -1,0 +1,245 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+    /*background-color: #000000;*/
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+
+.txt_area
+{
+    width: 250px;
+    background-color: #FFFFFF;
+}
+
+h6
+{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: tahoma;
+    font-weight: bold;
+    color: #666666;
+}
+
+/* LINKS STYLING */
+a
+{
+    text-decoration: none;
+    color: #808080;
+}
+
+a:hover
+{
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* MAIN OUTER CONTAINER */
+#main_container
+{
+    padding: 0px 0px 10px 0px;
+    background-color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto;
+	width: 1000px;
+    min-height: 500px;
+}
+
+
+/* DIV TAG WITH DOTTED TOP BORDER */
+.topDot
+{
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #CCCCCC;
+    margin-top: 10px;
+    padding-top: 5px;
+    text-align: justify;
+    line-height: 20px;
+    
+}
+
+
+.picPad
+{
+    margin-right: 10px;
+}
+
+
+.leftAlign
+{
+    float:left;
+    display:inline;
+    margin-right: 11px;
+    line-height: 15px;
+}
+
+/* CONTENT AREA FIRST */
+.column1
+{
+    float: left;
+    width: 350px;
+    margin-right: 10px;
+    margin-left: 10px;
+	margin-top:10px;
+}  
+
+
+
+/* CONTENT AREA SECOND */
+.column2
+{
+    float: left;
+    width: 254px;
+    margin-right: 10px;
+	margin-top:10px;
+}  
+
+/* CONTENT AREA THIRD */
+.column3  
+{
+    float:left;  
+    width: 350px;
+    margin-right: 10px;
+	margin-top:10px;
+    
+}
+
+    
+    /* SPRITES CONCEPT USED (HOVER ON images USING CSS)  */ 
+    
+/* SHOP OUTLET */
+.shopOutlet
+{
+    background-position: 0px 0px;
+    background-image: url('../images/Shopoutlet.jpg');
+    background-repeat: no-repeat;
+    width: 254px;
+    height: 155px;
+    cursor: pointer;
+}
+
+.shopOutlet:hover
+{
+    background-image: url('../images/Shop-Outlet-Hover-over.jpg');   
+}
+
+
+/* FEELING LUCKY */
+
+.feelingLucky
+{
+    background-position: 0px 0px;
+    background-image: url('../images/FeelingLucky.jpg');
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.feelingLucky:hover
+{
+    background-image: url('../images/FeelingLucky-Hover-over.jpg');
+}
+
+/* FEELING ADVEN */
+
+.feelingAdven
+{
+    background-position: 0px 0px;
+    background-image: url('../images/FeelingAdventurous.jpg');
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.feelingAdven:hover
+{
+    background-image: url('../images/FeelingAdventurous-Hover-over.jpg');
+}
+
+
+/* WOMENS SHOP*/
+.womensShop
+{
+    background-position: 0px 0px;
+    background-image: url('../images/shop_women.jpg');
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 420px;
+    cursor: pointer;
+}
+
+.womensShop:hover
+{
+    background-image: url('../images/Shopwomens-Hover-over.jpg');
+}
+
+/* MENS SHOP */
+.mensShop
+{
+    background-position: 0px 0px;
+    background-image: url('../images/shop_men.jpg');
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 420px;
+    cursor: pointer;
+}
+
+.mensShop:hover
+{
+    background-image: url('../images/Shopmens-Hover-Over.jpg');
+}
+
+
+
+
+
+
+/*** JQUERY SLIDE SHOW set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:200px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+/* ==== Change By Shariq ==========*/
+.soon{
+	color:#666666;
+    font-family:'Lucida Grande',sans-serif
+    font-size: 10px;
+	font-style:italic;
+    margin: 0;
+    padding: 0;
+}
+.tweet{
+	color:#909090;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:1em;
+	margin:0;
+	padding:0;
+}
+/*===== Chabge End ================*/
+
+
+  

@@ -1,0 +1,283 @@
+/* 
+* Copyrights © Apexure
+*/
+
+/* eric meyers RESET */
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+*/
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}*/
+/*
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}*/
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* elements arranged in order of the pageflow */
+
+#container1
+{
+width:970px;
+height:520px;
+margin:10px auto 0px;
+}
+
+#left_panel
+{
+background:url('images/left_panel_print.png');
+width:280px;
+height:520px;
+float:left;
+overflow:hidden;
+}
+
+#left_hor_strip
+{
+width:80px;
+height:520px;
+float:left;
+}
+
+#right_hor_strip
+{
+width:200px;
+height:520px;
+float:left;
+}
+
+#right_hor_strip .image_box
+{
+width:160px;
+height:170px;
+margin:60px 0px 0px;
+position:relative;
+left:-30px;
+background:url('images/gios_book.jpg');
+background-repeat:no-repeat;
+}
+
+
+#right_hor_strip .description_box
+{
+width:200px;
+height:180px;
+margin:20px 0px 0px;
+position:relative;
+left:-30px;
+color:white;
+}
+
+#right_hor_strip .description_box h1
+{
+font-size:22px;
+text-transform:uppercase;
+border-bottom:2px solid #FFF;
+width:170px;
+margin:0px 0px 10px 0px;
+line-height:30px;
+}
+
+#right_hor_strip .description_box p 
+{
+width:220px;
+overflow:hidden;
+line-height:24px;
+font-size:12px;
+font-family:times, georgia,arial, serif;
+}
+
+#right_hor_strip .separator
+{
+position:relative;
+right:80px;
+width:280px;
+margin:40px 0px 0px;
+border-bottom:1px solid #666;
+}
+
+
+#right_panel
+{
+background:url('images/container_bgStrip.jpg');
+float:left;
+margin:0px 0px 0px 3px;
+width:687px;
+overflow:hidden;
+height:520px;
+}
+
+#wrapper_imageBox
+{
+width:350px;
+height:480px;
+overflow:hidden;
+float:left;
+margin:20px 0px 0px 8px;
+background-color:#FFF;
+}
+
+#wrapper_imageBox .image_box
+{
+width:340px;
+height:470px;
+margin:5px auto;
+overflow:hidden;
+/* background:url('images/p1img.jpg') no-repeat; */
+}
+
+#wrapper_descriptionBox
+{
+width:310px;
+height:480px;
+float:left;
+margin:20px 0px 0px 8px;
+overflow:hidden;
+background:url('images/text_box_back.gif') no-repeat;
+background-color:#FFF;
+}
+
+#wrapper_descriptionBox .description_box 
+{
+width:260px;
+height:350px;
+margin:24px auto 10px;
+overflow:hidden;
+}
+
+#right_panel #wrapper_descriptionBox .description_box > div
+{
+height:350px;
+overflow:hidden;
+font-family:Palatino Linotype,times, georgia,arial, serif;
+line-height:24px;
+font-size:13px;
+}
+
+#wrapper_descriptionBox .description_box div.div1
+{
+margin:26px 0px 0px;
+font-family:georgia,arial, serif;
+font-size:15px;
+}
+
+#wrapper_descriptionBox .description_box #div1  .div2
+{
+font-family:times,georgia,arial, serif;
+font-size:15px;
+border-bottom:2px solid #3399CC;
+line-height:30px;
+margin:60px 0px 15px;
+width:170px;
+}
+
+#wrapper_descriptionBox .description_box #div5  .div2
+{
+margin:100px 0px 0px;
+}
+
+#wrapper_descriptionBox .description_box #div5  .div3
+{
+margin:20px 0px 0px;
+}
+
+#wrapper_descriptionBox .description_box #div6  .div2
+{
+margin:4px 0px 0px;
+}
+
+#wrapper_descriptionBox .description_box #div6  .div2 p
+{
+margin:0px 0px 8px;
+line-height:24px;
+}
+
+#wrapper_descriptionBox .description_box #div7  .div2
+{
+margin:120px 0px 0px;
+}
+
+
+
+
+#wrapper_descriptionBox .description_box  #div2 div.div2, #div3 div.div2, #div4 div.div2
+{
+font-size:13px;
+margin:100px 0px 0px;
+}
+
+#wrapper_descriptionBox #arrow_nav_wrapper
+{
+width:260px;
+height:30px;
+margin:20px auto 0px;
+}
+
+#wrapper_descriptionBox #arrow_nav_wrapper .leftNav
+{
+float:left;
+width:30px;
+height:30px;
+background:url('images/left_arrow.png') no-repeat;
+cursor:pointer;
+}
+
+#wrapper_descriptionBox #arrow_nav_wrapper .leftNav:hover
+{
+border-top:1px solid #fff;
+}
+
+#wrapper_descriptionBox #arrow_nav_wrapper .rightNav
+{
+float:right;
+width:30px;
+height:30px;
+background:url('images/right_arrow.png') no-repeat;
+cursor:pointer;
+}
+
+#wrapper_descriptionBox #arrow_nav_wrapper .rightNav:hover
+{
+border-top:1px solid #fff;
+}
+
+

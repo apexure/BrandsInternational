@@ -1,0 +1,8 @@
+
+#container1	  {background:url('images/bg1.jpg');width:990px; height:500px; margin:0 auto;}
+#container1 #div1,#div2{height:260px;float:left;margin:93px 20px 0px 40px;}
+#container1 #div1 h1,#div2 h1 {font-size:19px;text-transform:uppercase;text-align:left;margin:0px 0px 10px;}
+#container1 #div1 ul, #div2 ul {text-align:left;}
+#container1 #div1 ul a, #container1 #div2 ul a  {color:#000; line-height:18px; text-decoration:none; font-family:Verdana,arial;font-size:14px;text-shadow:0px 1px 0px #555;}
+#container1 #div1 ul a:hover,#container1 #div2 ul a:hover {color:#eea904;text-shadow:0px 1px 0px #eea904;}
+	

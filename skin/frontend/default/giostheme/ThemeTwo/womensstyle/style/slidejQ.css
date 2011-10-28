@@ -1,0 +1,60 @@
+﻿        
+        #preview_wrap {
+			margin: 0 auto;
+			padding: 0px;
+			width: 440px; 
+			height: 540px;
+		}
+
+		#preview_outer {
+			overflow: hidden;
+			width: 440px;
+			height: 540px;
+			position: relative;
+		}
+
+		#preview_inner {
+			position: relative;
+			font-size:12px;
+		}
+		
+		#preview_inner div
+            {
+                float: left;
+                width: 440px;
+                height: 540px;
+                position: relative;
+                text-align: right;
+            }
+		
+		#preview_inner div a
+{
+    position: absolute;
+    color: #000066;
+    background: url(bg_trans.png);
+    text-decoration: none;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #FFFFCC;
+}
+
+		#thumbs {
+			position: relative;
+			text-align: left;	
+		}
+
+		#thumbs span {
+			width: 160px;
+			height: 240px;
+			cursor: pointer;
+			background: url('bg_thumb.gif') top left no-repeat;
+		}
+
+		#arrow {
+			position: absolute;
+			top: -13px;
+			background: url('bg_arrow.gif') top center no-repeat;
+			width: 104px;
+			height: 39px;
+			display: none;
+		}

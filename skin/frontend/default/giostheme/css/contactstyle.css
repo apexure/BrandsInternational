@@ -1,0 +1,62 @@
+.frmcontact{
+    border: 0px none;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: auto;
+}
+.frmcontact ul {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+}
+.frmcontact ul li {
+    clear: both;
+    display: block;
+    float: none;
+    list-style-type: none;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 11px;
+margin: 1px 20px 2px 2px;
+}
+
+.frmcontact ul li label {
+    color: #000000;
+    display: block;
+    float: left;
+    width: 200px;
+}
+
+.frmcontact .input-text{
+width:210px;
+height:20px;
+background-color:#EFEFEF; !important;
+}
+.frmcontact .text-area{
+height:90px;
+width:210px;
+background-color:#EFEFEF; !important;
+}
+.primary-action{
+margin-left:20px;
+width:150px;
+display:block;
+color:#FFFFFF;
+background-color:#000000;
+}
+.email{color:blue;}
+.alternate_contact{
+margin-left:20px;
+}

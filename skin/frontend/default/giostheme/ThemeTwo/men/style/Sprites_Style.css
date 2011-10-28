@@ -1,0 +1,53 @@
+﻿
+
+/* CSS SPRITES */
+
+
+
+.blog
+{
+    background-position: 0px 0px;
+    background-image: url('../Images/Threeblock-Blog.jpg');
+    background-repeat: no-repeat;
+    width: 139px;
+    height: 139px;
+    cursor: pointer;
+}
+
+.blog:hover
+{
+    background-image: url('../Images/Threeblock-Blog-hover-0ver.jpg');
+    background-repeat: no-repeat;
+}
+
+.sale
+{
+    background-position: 0px 0px;
+    background-image: url('../Images/Threeblock-Sale.jpg');
+    background-repeat: no-repeat;
+    width: 139px;
+    height: 139px;
+    cursor: pointer;
+}
+
+.sale:hover
+{
+    background-image: url('../Images/Threeblock-Sale-hover-over.jpg');
+    background-repeat: no-repeat;
+}
+
+.adven
+{
+    background-position: 0px 0px;
+    background-image: url('../Images/Threeblocks-Feeling.jpg');
+    background-repeat: no-repeat;
+    width: 139px;
+    height: 139px;
+    cursor: pointer;
+}
+
+.adven:hover
+{
+    background-image: url('../Images/Threeblocks-Feeling-hover-over.jpg');
+    background-repeat: no-repeat;
+}
