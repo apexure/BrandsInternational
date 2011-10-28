@@ -1,0 +1,202 @@
+<head>
+	<script type="text/javascript">
+		var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+	</script>
+</head>
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_blank
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); $_product = $this->getProduct();?>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view">
+	<div class="product-essential">
+	<form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+	<fieldset class="no-display">
+		<input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+		<input type="hidden" name="related_product" id="related-products-field" value="" />
+	</fieldset>
+
+		<div class="product-img-box">
+			<?php echo $this->getChildHtml('media') ?>
+		</div>
+
+		<div class="product-shop">
+			<?php echo $this->getPriceHtml($_product) ?>
+			<div class="product-name">
+				<h2><?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getName()), 'name') ?></h2>
+			</div>
+			
+
+
+			<?php if ($this->canEmailToFriend()): ?>
+				<a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a>
+			<?php endif; ?>
+
+			<?//php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+ 
+ 
+ 
+			<?php echo $this->getChildHtml('alert_urls') ?>
+
+			<?php echo $this->getChildHtml('tierprices') ?>
+			
+		<?php if ($_description = $this->getChildHtml('description')):?>
+			<div class="description">
+				<h3><?//php echo $this->__('Product Description') ?></h3>
+				<?php echo $_description ?>
+			</div>
+		<?php endif;?>
+		
+		<?php echo $this->getChildHtml('other');?>
+
+		 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+			<?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+		<?php endif;?>
+
+		<?php if ($_product->isSaleable() && $this->hasOptions()):?>
+			<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+		<?php endif;?>
+
+	 <?php echo $this->getChildHtml('product_type_data') ?>
+	<!-- Original Product Tabs, found in Static Blocks -> Product Tabs -->
+	<?//php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs')->toHtml() ?> 
+	
+		<!--Removing the -->
+		<script language="Javascript" type="text/Javascript">
+			function changetab(tabfrom)
+			{
+				if (tabfrom == "2")
+				{
+					//Free Returns Code
+					document.getElementById('toptab1').className = 'unselectedtab';
+					document.getElementById('toptab2').className='selectedtab';
+					document.getElementById('tab2').style.display="inline";
+					document.getElementById('tab1').style.display="none";
+					/* Effect.BlindUp('tab1');
+					setTimeout("Effect.BlindDown('tab2');",1500); */
+				}
+				else
+				{
+					//Delivery Tab Code
+					document.getElementById('toptab2').className='unselectedtab';
+					document.getElementById('toptab1').className='selectedtab';
+					document.getElementById('tab1').style.display="inline";
+					document.getElementById('tab2').style.display="none";
+					/* Effect.BlindUp('tab2');
+					setTimeout("Effect.BlindDown('tab1');",1500); */
+				}
+			}
+		</script>
+		
+		<!-- <script type="text/Javascript" src="http://www.azamdevelopment.com/gioslive/js/scriptaculous/prototype.js"> </script>
+		<script type="text/Javascript" src="http://www.azamdevelopment.com/gioslive/js/scriptaculous/scriptaculous.js"> </script> -->
+		<a href="Javascript:void();" onClick="changetab('1');" class="selectedtab" id="toptab1">
+			Delivery
+		<a href="Javascript:void();" onClick="changetab('2');" class="unselectedtab" id="toptab2" >
+			Free Returns
+		</a>
+			
+		<div class="tab_container">
+			<div id="tab1" class="tab_content">
+				<p>UK Super Saver: Within 5 working days – FREE</p>
+				<p>UK Standard: Within 3 working days – £3.95 or FREE if you spend over £75</p>
+				<p>UK Next Day: Order by 7pm Weekdays or 2pm Sunday - £5.95 or FREE if you spend over £100</p>
+			</div>
+			<div id="tab2" class="tab_content" style="display:none;">
+				<p>If you are not completely satisfied with your purchase,  simply return the item's to us in their original condition and packaging  within 28 days of receipt and we will issue a full refund (excluding  original delivery charge), or exchange the item for a different size /  colour, if preferred.</p>
+				<p><a href="#" id="retpol" title="Click here to book a collection">Click here to book a  collection in the UK for only £2.95</a></p>
+			</div>
+		</div>
+
+			<?php echo $this->getChildHtml('related'); ?> 
+
+		
+<!-- 
+		<?php /* if (!$this->hasOptions()):?>
+				<div class="add-to-box">
+					<?php if($_product->isSaleable()): ?>
+						<?php echo $this->getChildHtml('addtocart') ?>
+						<?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+							<span class="or"><?php echo $this->__('OR') ?></span>
+						<?php endif; ?>
+					<?php endif; ?>
+					<?php echo $this->getChildHtml('addto') ?>
+				</div>
+			<?php else:?>
+				<?php echo $this->getChildHtml('addto') ?>
+			<?php endif; ?>
+
+			<?php if ($_product->getShortDescription()):?>
+				<div class="short-description std">
+					<h3><?php echo $this->__('Quick Overview') ?></h3>
+					<?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?>
+				</div>
+			<?php endif; */?>
+ -->
+ 
+		 <div class="clearer"></div>
+		</div>
+
+	</form>
+	
+	
+	<script type="text/javascript">
+	//<![CDATA[
+		var productAddToCartForm = new VarienForm('product_addtocart_form');
+		productAddToCartForm.submit = function(){
+				if (this.validator.validate()) {
+						this.form.submit();
+				}
+		}.bind(productAddToCartForm);
+	//]]>
+	</script>
+	</div>
+
+	<div class="product-collateral">
+	   
+		<!-- 
+		<?php if ($_additional = $this->getChildHtml('additional')):?>
+			<div class="additional">
+				<h3><?php echo $this->__('Additional Information') ?></h3>
+				<?php echo $_additional ?>
+			</div>
+		<?php endif;?>
+ -->
+		<?php echo $this->getChildHtml('upsell_products') ?>
+<!-- 
+		<?php echo $this->getChildHtml('product_additional_data') ?>
+ -->
+	</div>
+<br />
+<br />
+</div>

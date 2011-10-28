@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <title>GIOS CONCEPTS :: Homepage </title>
+    <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/css/Sprites_Style.css" rel="stylesheet" type="text/css" />
+	<!-- <script src="<?php echo $this->getSkinUrl();?>js/jquery/jquery-1.2.6.min.js" type="text/javascript"></script> -->
+    <!-- <script src="<?php echo $this->getSkinUrl();?>ThemeTwo/js/jquery-1.2.6.min.js" type="text/javascript"></script> -->
+
+ 
+<script type="text/Javascript">
+			
+		//var $j = jQuery.noConflict();
+		
+		//$j(document).ready(function()
+		//{
+			function slideSwitch() 
+			{
+				var active = jQuery('#slideshow IMG.active');
+				if (active.length == 0) active = jQuery('#slideshow IMG:last');
+				// use this to pull the images in the order they appear in the markup
+				var next = jQuery(active).next().length ? jQuery(active).next()
+				: jQuery('#slideshow IMG:first');
+				// uncomment the 3 lines below to pull the images in random order
+				// var $sibs  = $active.siblings();
+				// var rndNum = Math.floor(Math.random() * $sibs.length );
+				// var $next  = $( $sibs[ rndNum ] );
+	            jQuery(active).addClass('last-active');
+				jQuery(next).css({ opacity: 0.0 })
+				.addClass('active')
+				.animate({ opacity: 1.0 }, 1000, function () {
+                jQuery(active).removeClass('active last-active');
+				});
+
+			}  
+       // });
+
+        jQuery(function () {
+            window.setInterval(slideSwitch, 5000);
+        });
+			
+
+              
+		</script>
+
+</head>
+<body>
+
+    
+    
+    
+    <div id="main_container">
+        
+            
+          
+
+
+            <!--FIRST COLOUMN-->
+        <div class="column1">
+           	<a href="<?php echo $this->getBaseUrl()?>women">			
+            <img alt="" class="feelingLucky" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" /><br />
+            <br />
+            </a>
+			<a href="<?php echo $this->getBaseUrl()?>women">			
+            <img alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" class="womensShop" />
+			</a><br />
+            <br />
+			<a href="<?php echo $this->getBaseUrl()?>women/fitflop.html">
+            <img alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/fitflop.jpg" />
+			</a>
+        </div>
+
+        
+        <!--SECOUND COLOUMN-->
+        <div class="column2">
+             <a href="<?php echo $this->getBaseUrl()?>outlet.html">
+            <img alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" class="shopOutlet" />
+			</a><br />
+            <br />
+
+                <div style="height:162px;">
+                  <h6>GC COMMUNITY -<span class="soon"> Comming Soon! </span></h6>
+                    <hr style="border: thin dotted #999999" />
+                        <span style="font-weight: bold">
+                        Latest Blog <img class="pen" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" alt="brands" /><br />
+                        Gios Concept Facebook </span><br />
+                         <hr style="border: thin dotted #999999" />
+                        Welcome to Gio&#39;s Concept. Step up your game and get your identity back <br/><span class="tweet">2 days ago</span>
+                         
+                         <hr style="border: thin dotted #999999" />
+                         New Spring / Summer Collections 2011 IN STOCK AND ONLINE NOW!<br/>
+						 <span class="tweet">3 days ago</span>
+               </div>
+
+               <div style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #CCCCCC; margin-top:12px;"></div>
+             <br />
+                    <!--ADS SLIDE SHOW-->
+                <div id="slideshow">
+                    <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/Scrolling-Ads-Image-1.jpg" alt="Slideshow Image 1" class="active" />
+                    <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/Scrolling-Ads-Image-2.jpg" alt="Slideshow Image 2" />
+                </div>   
+             <br />
+                 
+
+                    <!--GET INVOLVED-->
+                <div class="txt_area" style="height: 120px;">
+                    
+                    <h6>GET INVLOVED - <span class="soon"> Comming Soon! </span></h6>
+                    <hr style="border: thin dotted #999999" />
+                   
+                    Come Write for Us
+                    <img alt="" align="middle" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" class="pen" /><br />
+                    <br />
+                    Come Design for Us
+                    <img align="middle" alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" class="t-shirt" /><br />
+                    Ready with the Next Fashion Trend?
+                    <img alt="" align="middle" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" class="bulb" />
+               </div>
+                    
+        </div>
+       
+       
+
+
+        <!--THIRD COLOUMN-->
+        <div class="column3">
+			
+			 <a href="<?php echo $this->getBaseUrl()?>men">
+			   <img alt="" class="mensShop" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" border="0"/>
+			  <br />
+            <br />
+            <img alt="" class="feelingAdven" src="<?php echo $this->getSkinUrl();?>ThemeTwo/images/img_trans.gif" /><br />
+            <br /
+            </a>
+				
+				 <h6>BRANDS - A Sneaky Peek</h6>
+                    <hr style="border: thin dotted #999999" />
+
+                    <div class="leftAlign">
+                        <a href="<?php echo $this->getBaseUrl();?>men/converse.html">Converse</a> <br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/roxy.html">Roxy</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/quiksilver.html">Quiksilver</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/bench.html">Bench</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/emu.html">Emu</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/ugg.html">UGG</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/fredperry.html">Fred Perry</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/animal.html">Animal
+                        
+                        </a>
+                        
+                    </div>
+				
+				<div class="leftAlign">
+                        <a href="<?php echo $this->getBaseUrl();?>women/volcom.html">Volcom</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/alpinestars.html">Alpinestars</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/henleys.html">Henleys</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/duckncover.html">Duck and Cover</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/applebottoms.html">Apple Bottoms</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/misssixty.html">Miss Sixty</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/firetrap.html">Firetrap</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/hunter.html">Hunter
+                        </a>
+                </div>
+				<div class="leftAlign">
+                        <a href="<?php echo $this->getBaseUrl();?>women/desigual.html">Desigual</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/drmartens.html">Dr Martens</a><br /> 
+						<a href="<?php echo $this->getBaseUrl();?>women/diesel.html">Diesel</a><br />      
+						<a href="<?php echo $this->getBaseUrl();?>women/giogoi.html">Gio Goi</a><br />     
+						<a href="<?php echo $this->getBaseUrl();?>women/lacoste.html">Lacoste</a><br />   
+						<a href="<?php echo $this->getBaseUrl();?>women/rayban.html">Ray-Ban</a><br />    
+						<a href="<?php echo $this->getBaseUrl();?>women/fiorelli.html">Fiorelli</a><br /> 
+						<a href="<?php echo $this->getBaseUrl();?>women/nike.html">Nike</a>
+                 </div>
+				 
+				  <div class="leftAlign">
+                    
+                        <a href="<?php echo $this->getBaseUrl();?>women/eastpak.html">EASTPAK</a><br />
+                        <a href="<?php echo $this->getBaseUrl();?>women/timberland.html">Timberland</a><br /> 
+						<a href="<?php echo $this->getBaseUrl();?>women/dirtydog.html">Dirty Dog</a><br />    
+						<a href="<?php echo $this->getBaseUrl();?>women/fly53.html">FLY53</a><br />   
+						<a href="<?php echo $this->getBaseUrl();?>women/dvs.html">DVS</a><br />  
+						<a href="<?php echo $this->getBaseUrl();?>women/kswiss.html">K-Swiss</a><br /> 
+						<a href="<?php echo $this->getBaseUrl();?>women/gola.html">Gola</a><br /> 
+						<a href="<?php echo $this->getBaseUrl();?>women/ironfist.html">Iron Fist</a> 
+                    </div>
+					
+				
+				
+				
+				
+           </div>
+
+        <div style="clear:both"></div>  
+       
+  </div>
+
+</body>
+</html>

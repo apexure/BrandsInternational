@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mens Style Pick</title>
+    <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/style/StyleSheet.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+    <!--[if IE 6]>
+	<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+		DD_belatedPNG.fix('#preview_inner div a');
+	</script>
+	<![endif]--> 
+
+
+    <style type="text/css">
+		#preview_wrap {
+			margin: 0 auto;
+			padding: 22px;
+			width: 450px; 
+			background: url('bg_preview.gif') top left no-repeat;
+		}
+
+		#preview_outer {
+			overflow: hidden;
+			width: 450px; 
+			position: relative;
+		}
+
+		#preview_inner {
+			text-align: left;
+			position: relative;
+		}
+		
+		
+		#preview_inner div {
+			float: left;
+			width: 450px; 
+			height: 720px;
+			position: relative;
+			
+		}
+		
+		
+		#preview_inner div a {
+			
+			position: absolute;
+			bottom: 0;
+			top:540px;
+			left: 0;	
+			display: block;
+			width: 99%;
+			padding: 20px 10px 20px 10px;
+			color: #000;
+			text-decoration: none;
+			font-size: 12px;
+			line-height:20px;
+		}
+		
+		#preview_inner div a p { text-align: right; padding-right:20px; color:#0066FF; text-transform:uppercase; text-decoration:underline;}
+		    #preview_inner div a span { font-weight:bold; }
+			#preview_inner div a p:hover { text-decoration:none;}
+			
+
+       
+
+		#thumbs {
+			padding-top: 0px;
+			position: relative;
+			text-align: center;	
+		}
+
+		#thumbs div {
+			
+			width: 160px;
+			height: 285px;
+			cursor: pointer;
+			float:left;
+			margin-left:7px;
+			margin-right:6px;
+		}
+		    
+		   
+    /*
+		#arrow {
+			position: absolute;
+			top: -13px;
+			background: url('bg_arrow.gif') top center no-repeat;
+			width: 104px;
+			height: 39px;
+			display: none;
+		}
+        */
+
+	</style>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        // Save  the jQuery objects for later use.
+	        var outer = $("#preview_outer");
+	        var arrow = $("#arrow");
+	        var thumbs = $("#thumbs div");
+
+	        var preview_pos;
+	        var preview_els = $("#preview_inner div");
+	        var image_width = preview_els.eq(0).width(); // Get width of imaages
+
+	        // Hook up the click event
+	        thumbs.click(function () {
+	            // Get position of current image
+	            preview_pos = preview_els.eq(thumbs.index(this)).position();
+
+	            // Animate them!
+	            outer.stop().animate({ 'scrollLeft': preview_pos.left }, 500);
+	            arrow.stop().animate({ 'left': $(this).position().left }, 500);
+	        });
+
+	        // Reset positions on load
+	        arrow.css({ 'left': thumbs.eq(0).position().left }).show();
+	        outer.animate({ 'scrollLeft': 0 }, 0);
+
+	        // Set initial width
+	        $("#preview_inner").css('width', preview_els.length * image_width);
+	    });
+	</script>
+</head>
+<body>
+        
+        <div id="container">
+        
+            <!--LEFT SIDE -->
+
+                <div class="Lside">
+
+                    <div id="preview_wrap">
+			            <div id="preview_outer">
+				            <div id="preview_inner">
+					           
+                                <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-1M-Franklin-and-Marshall-White-T-Shirt.jpg" alt="" />
+                                    <a href="<?php echo $this->getBaseUrl();?>franklin-and-marshall-white-t-shirt-5.html">
+                                        <span>Franklin and Marshall White T-Shirt</span><br /><br />
+
+                                        Franklin & Marshall was founded in 1999 by 2 Italian entrepreneurs with a passion for North American culture. We have amassed a great collection of their most fashionable pieces, at prices you will love.
+                                        
+                                        <p>SHOP Franklin and Marshall White T-Shirt</p>
+
+                                    </a>
+                                    
+                                    
+					            </div>
+					            <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-2M-Firetrap-Deathrace-Stone-Blue-T-Shirt.jpg" alt="" />
+                                    <a href="<?php echo $this->getBaseUrl();?>firetrap-deathrace-stone-blue-t-shirt.html">
+                                        <span>Firetrap Deathrace Stone Blue T-Shirt</span><br /><br />
+                                        Race into pole position with this slim-fit, luxury cotton shirt. Showcasing an exclusive Firetrap 'deathrace' design, work it with loose jeans, cardigans and scarves for a fresh summer look.
+                                        <p>SHOP Firetrap Deathrace Stone Blue T-Shirt</p>
+                                    </a>
+					            </div>
+
+                                  <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-3M-Birkenstock-Arizona-Dark-Brown-Sandals.jpg" alt="" />
+                                      <a href="<?php echo $this->getBaseUrl();?>men/birkenstock/birkenstock-arizona-dark-brown-sandles.html">
+                                        <span>Birkenstock Arizona Dark Brown Sandals</span><br /><br />
+                                            The Arizona has for years been one of Birkenstock's most popular models of Sandals worldwide. The versatile Birkenstock classic is equally suitable for use at work and at play.We've only tested these at play.
+                                        <p>SHOP Birkenstock Arizona Dark Brown Sandals</p>
+                                    
+                                      </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-4M-Vans-Modernist-Shark-Fedora.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>vans-modernist-shark-fedora.html">
+                                        <span>Vans Modernist Shark Fedora</span><br /><br />
+                                            The Modernist takes that dapper fedora style the way it's been worn by respected men for a century, and then taps into its more contemporary roots. Perfect hangout headwear.
+                                        <p>SHOP Vans Modernist Shark Fedora</p>
+                                    
+                                     </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-5M-Supra-Skytop-Navy-Nylon.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>supra-skytop-navy-nylon.html">
+                                        <span>Supra Skytop Navy Nylon</span><br /><br />
+                                            You'll want these. Super soft exclusive SUPRAFOAM&#174; midsolve to provide entire foot impact resistance. Quite the board feel with optimal flex to work with you. Grab a pair.
+ 
+                                        <p>SHOP Supra Skytop Navy Nylon</p>
+                                    
+                                    
+                                     </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Main-image-left-6M-Skullcandy-Aviator-Black-Headphones.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>skullcandy-aviator-black-headphones.html">
+                                    
+                                        <span>Skullcandy Aviator Black Headphones</span><br /><br />
+                                        Skullcandy creates headphones that will pump vibes like no other. This pair offers their Platinum Sound Performance with a 40mm full-range enhanced audio driver. Check out our range.
+                                        <p>SHOP Skullcandy Aviator Black Headphones</p>
+                                    
+                                    
+                                     </a>
+					            </div>
+					            
+				            </div>
+			            </div>
+		            </div>
+                 </div>
+                   
+
+            <!--RIGHT SIDE-->
+                <div class="Rside">
+                    
+                        <p style="padding: 0px; margin: 0px">
+                            <img align="right" alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/header-Right.jpg" /></p><br /><br />
+                    <div id="thumbs">
+			              <br /><br /><br />
+			            <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-1M-Franklin-and-Marshall-White-T-Shirt.jpg" alt="" /> Franklin and Marshall<br />White T-Shirt</div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-2M-Firetrap-Deathrace-Stone-Blue-T-Shirt.jpg" alt="" /> Firetrap Deathrace<br />Stone Blue T-Shirt</div>
+			            <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-3M-Birkenstock-Arizona-Dark-Brown-Sandals.jpg" alt="" /> Birkenstock Arizona<br /> Dark Brown Sandals </div>
+                      
+                        
+			        
+                       
+					    <br /><br /><br />
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-4M-Vans-Modernist-Shark-Fedora.jpg" alt="" /> Vans Modernist<br /> Shark Fedora </div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-5M-Supra-Skytop-Navy-Nylon.jpg" alt="" /> Supra Skytop<br />Navy Nylon</div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/images/Small-image-right-6M-Skullcandy-Aviator-Black-Headphones.jpg" alt="" /> Skullcandy Aviator<br />Black Headphones</div>
+						
+                        <div class="clear"></div>
+                        
+		            </div>
+
+            </div>
+       
+        
+        </div>
+
+
+</body>
+</html>

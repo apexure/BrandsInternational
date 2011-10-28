@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Contact us</title>
+    <link href="<?php echo $this->getSkinUrl()?>css/contactstyle.css" rel="stylesheet" type="text/css" />
+			
+		<script type="text/Javascript">
+			var fromLink = "";
+			var fromArray = "";
+			var fromLoc = "";
+			var x;
+			
+			var DeliveryArray=new Array(6);	
+			DeliveryArray[0]=new Array(2);
+				DeliveryArray[0][0]="What are the delivery costs?";
+				DeliveryArray[0][1]="Depending on where you wish the order to be sent, delivery costs will vary. See <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com\/terms#delinfo \">here<\/a> for more information";
+			DeliveryArray[1]=new Array(2);
+				DeliveryArray[1][0]="When can I expect my delivery?";
+				DeliveryArray[1][1]="This is dependant on when you placed your order with us and which delivery method was chosen. However, most orders should be receibed within 5 working days if in the UK. For more information, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com\/terms#delinfo\">here<\/a>";
+			DeliveryArray[2]=new Array(2);
+				DeliveryArray[2][0]="Where do you ship to?";
+				DeliveryArray[2][1]="We ship orders worldwide, for the full list of countries we deliver to, see <a class=\"rightbox\" href=\"http://www.giosconcept.com/terms#delinfo\">here</a>";
+			DeliveryArray[3]=new Array(2);
+				DeliveryArray[3][0]="Can I change the delivery address once the order has been dispatched?";
+				DeliveryArray[3][1]="We may be able to change the delivery address, if it is a residential address, given sufficient time has been given. However, we cannot change a delivery address to a business address. For more information, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com\/terms#delinfo\">here<\/a>";
+			DeliveryArray[4]=new Array(2);
+				DeliveryArray[4][0]="Can I track my order?";
+				DeliveryArray[4][1]="For orders within the UK, a Royal Mail Track&amp;Trace code can be used to trace your order. For more information, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com/terms#track\">here<\/a>, or alternatively, contact us at <a class=\"rightbox\" href=\"mail:order@giosconcept.com\"> order@giosconcept.com. <\/a>";
+			DeliveryArray[5]=new Array(2);
+				DeliveryArray[5][0]="Can I cancel my order?";
+				DeliveryArray[5][1]="You may cancel your order with us as long as the order has not already been dispatched. Otherwise, please see the returns section <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com/terms#returns\">here<\/a>";
+
+			var ReturnsArray=new Array(6);
+			ReturnsArray[0]=new Array(2);
+				ReturnsArray[0][0]="Can I return an item if I'm not happy with it?";
+				ReturnsArray[0][1]="As long as the item is returned in an unused and condition, with it's original tags attached and with it's original packaging, you can return your item to us for a full refund of the purchase price. For more information, see <a class=\"rightbox\" href=\"http://www.giosconcept.com/terms#returns\">here</a>";
+			ReturnsArray[1]=new Array(2);
+				ReturnsArray[1][0]="Can I return items bought as a special offer?";
+				ReturnsArray[1][1]="If you return a single item bought as part of a multi-buy discount offer (for example 'buy 2 for £20.00') you will be refunded the full price of that item less the total discount given in the offer. If you return all items purchased with the multi-buy discount you will be refunded with the full multi-buy value. For combination purchases ('buy one get on free' or 'get the lowest priced item free'), you must return any free items or vouchers back for us to process a refund.";
+			ReturnsArray[2]=new Array(2);
+				ReturnsArray[2][0]="Can I return an item which is of unsatifactory quality or unfit for purpose?";
+				ReturnsArray[2][1]="You can return these items to us using the freepost returns label. Alternatively you can return them to our stores (excluding those in department stores). ";
+			ReturnsArray[3]=new Array(2);
+				ReturnsArray[3][0]="Do you have a 'cooling off' period?";
+				ReturnsArray[3][1]="Yes. In addition to our returns policy, under the Distance Selling Regulations you have seven working days (beginning the day after receipt) to cancel your purchase. For more information, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com/terms#returns\">here<\/a>";
+			ReturnsArray[4]=new Array(2);
+				ReturnsArray[4][0]="Will you refund the delivery charge?";
+				ReturnsArray[4][1]="If we have made a mistake on an item sent to you or it is faulty, damaged, of unsatisfactory quality or unfit for purpose, we will refund the delivery charges you have paid to receive that item unless it was sent to you with other items which you are not returning. We will also refund the delivery charges if you are an EU customer cancelling your purchase within the seven-day cooling off period. Details of the returns procedure will also be sent to you with your order.";
+			ReturnsArray[5]=new Array(2);
+				ReturnsArray[5][0]="Are my statutory rights affected?";
+				ReturnsArray[5][1]="Your statutory rights are not affected by our returns policy. ";
+			
+			var TechnicalArray=new Array(8);
+			TechnicalArray[0]=new Array(2);
+				TechnicalArray[0][0]="I am having problems buying from your website.";
+				TechnicalArray[0][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a> to resolve shopping queries";
+			TechnicalArray[1]=new Array(2);
+				TechnicalArray[1][0]="I am not receiving your newsletters.";
+				TechnicalArray[1][1]="If you not already done so, please try re-entering your E-Mail address into the newsletter sign-up field. Otherwise, contact us at <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a>";
+			TechnicalArray[2]=new Array(2);
+				TechnicalArray[2][0]="I am having trouble with my shopping basket.";
+				TechnicalArray[2][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a> to resolve shopping queries";
+			TechnicalArray[3]=new Array(2);
+				TechnicalArray[3][0]="I can't sign into my account";
+				TechnicalArray[3][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a>";
+			TechnicalArray[4]=new Array(2);
+				TechnicalArray[4][0]="I can't create a new account";
+				TechnicalArray[4][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a>";
+			TechnicalArray[5]=new Array(2);
+				TechnicalArray[5][0]="I am having trouble using a gift voucher I have been given.";
+				TechnicalArray[5][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a>";
+			TechnicalArray[6]=new Array(2);
+				TechnicalArray[6][0]="Is it safe ordering online with you?";
+				TechnicalArray[6][1]="Yes. Gio’sConcept.com is working together with Visa and MasterCard to offer you a safer shopping experience when using your credit card online. Please see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com/terms#verification\">here<\/a>";
+			TechnicalArray[7]=new Array(2);
+				TechnicalArray[7][0]="My payment has been declined?";
+				TechnicalArray[7][1]="All credit/debit cardholders are subject to validation checks and authorisation by the card issuer. If validation shoudl fail, the payment may be declined. If you have any further issues, contact us at <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a>. Alternatively, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com/terms#verification\">here<\/a> for more details";
+
+			var ContactArray=new Array(6);
+			ContactArray[0]=new Array(2);
+				ContactArray[0][0]="Customer Care";
+				ContactArray[0][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			ContactArray[1]=new Array(2);
+				ContactArray[1][0]="Technical Support";
+				ContactArray[1][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			ContactArray[2]=new Array(2);	
+				ContactArray[2][0]="Press and Media";
+				ContactArray[2][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			ContactArray[3]=new Array(2);	
+				ContactArray[3][0]="Commerical Enquiries";
+				ContactArray[3][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			ContactArray[4]=new Array(2);	
+				ContactArray[4][0]="General Marketing";
+				ContactArray[4][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			ContactArray[5]=new Array(2);	
+				ContactArray[5][0]="Supplier Link";
+				ContactArray[5][1]="<form action=\"mailto:sales@giosconcept.com\" method=\"post\" enctype=\"text\/plain\"><label>Name:<\/label><input type=\"text\" name=\"Name\"><br \/><label>Email:<\/label><input type=\"text\" name=\"Email\"><br \/><label>Message:<\/label><textarea cols=\"16\" rows=\"2\" name=\"Message\"><\/textarea><br \/><br \/><label>&nbsp;<\/label><input type=\"submit\" value=\"Submit\" class=\"submit\" \/><\/form>";
+			
+			var FAQArray=new Array(5);
+			FAQArray[0]=new Array(2);
+				FAQArray[0][0]="How do I search for a specific product?";
+				FAQArray[0][1]="Using the search box at the top of the Gios Concept site, you will be able to search out entire stock for a product.";
+			FAQArray[1]=new Array(2);
+				FAQArray[1][0]="How do I sign up for your newsletter?";
+				FAQArray[1][1]="";
+			FAQArray[2]=new Array(2);
+				FAQArray[2][0]="What can I do if something is wrong with my order?";
+				FAQArray[2][1]="Please contact us on <a class=\"rightbox\" href=\"mailto:order@giosconcept.com\" >order@giosconcept.com<\/a> to resolve shopping queries";
+			FAQArray[3]=new Array(2);
+				FAQArray[3][0]="When can I expect my delivery?";
+				FAQArray[3][1]="This is dependant on when you placed your order with us and which delivery method was chosen. However, most orders should be receibed within 5 working days if in the UK. For more information, see <a class=\"rightbox\" href=\"http:\/\/www.giosconcept.com\/terms#delinfo\">here<\/a>";
+			FAQArray[4]=new Array(2);
+				FAQArray[4][0]="Do you have a shop?";
+				FAQArray[4][1]="Yes, you can find us at: <br \/>103 High Street,<br \/> King'S Lynn,<br \/> Norfolk,<br \/> PE30 1BW";
+			
+			function LoadLinks(fromLink)
+			{
+				var createdLinks="";
+				document.getElementById('centerbox').innerHTML="";
+				document.getElementById('rightbox').innerHTML="";
+				
+				if (fromLink=="Delivery")
+				{
+					for(x=0;x<DeliveryArray.length;x++)
+					{
+						createdLinks=createdLinks+"<li class=\"Link1\"><a class=\"Link1\" href=\"javascript:void(0);\" onclick=\"LoadContent('DeliveryArray','"+x+"')\" class=\"Link1\">"+DeliveryArray[x][0]+"<\/a></li>";
+					}
+				}
+				else if (fromLink=="Returns")
+				{
+					for(x=0;x<ReturnsArray.length;x++)
+					{
+						createdLinks=createdLinks+"<li class=\"Link1\"><a class=\"Link1\" href=\"javascript:void(0);\" onclick=\"LoadContent('ReturnsArray','"+x+"')\" class=\"Link1\">"+ReturnsArray[x][0]+"<\/a></li>";
+					}
+				}
+				
+				else if (fromLink=="Technical")
+				{
+					for(x=0;x<TechnicalArray.length;x++)
+					{
+						createdLinks=createdLinks+"<li class=\"Link1\"><a class=\"Link1\" href=\"javascript:void(0);\" onclick=\"LoadContent('TechnicalArray','"+x+"')\" class=\"Link1\">"+TechnicalArray[x][0]+"<\/a></li>";
+					}
+				}
+				else if (fromLink=="Contact")
+				{
+					for(x=0;x<ContactArray.length;x++)
+					{
+						createdLinks=createdLinks+"<li class=\"Link1\"><a class=\"Link1\" href=\"javascript:void(0);\" onclick=\"LoadContent('ContactArray','"+x+"')\" class=\"Link1\">"+ContactArray[x][0]+"<\/a></li>";
+					}
+				}
+				else if (fromLink=="FAQ")
+				{
+					for(x=0;x<FAQArray.length;x++)
+					{
+						createdLinks=createdLinks+"<li class=\"Link1\"><a class=\"Link1\" href=\"javascript:void(0);\" onclick=\"LoadContent('FAQArray','"+x+"')\" class=\"Link1\">"+FAQArray[x][0]+"<\/a></li>";
+					}
+				}
+				else 
+				{
+					createdLinks = "An Error Occurred";
+				}
+				
+				document.getElementById('centerbox').innerHTML="<span class=\"centerbox\">"+fromLink+"<\/span><br /><hr /><br />"+createdLinks;
+			}
+			
+			function LoadContent(fromArray,fromLoc)
+			{
+				var createdContent="";
+				var originalLoc="";
+				if (fromArray=="DeliveryArray")
+				{
+					createdContent=(DeliveryArray[fromLoc][1]);
+					originalLoc=(DeliveryArray[fromLoc][0]);
+				}
+				else if (fromArray=="ReturnsArray")
+				{
+					createdContent=(ReturnsArray[fromLoc][1]);
+					originalLoc=(ReturnsArray[fromLoc][0]);
+				}
+				else if (fromArray=="TechnicalArray")
+				{
+					createdContent=(TechnicalArray[fromLoc][1]);
+					originalLoc=(TechnicalArray[fromLoc][0]);
+				}
+				else if (fromArray=="ContactArray")
+				{
+					createdContent=(ContactArray[fromLoc][1]);
+					originalLoc=(ContactArray[fromLoc][0]);
+				}
+				else if (fromArray=="FAQArray")
+				{
+					createdContent=(FAQArray[fromLoc][1]);
+					originalLoc=(FAQArray[fromLoc][0]);
+				}
+				else 
+				{
+					createdContent="An Error Occurred";
+				}
+				document.getElementById('rightbox').innerHTML="<span class=\"rightbox\">"+originalLoc+"<\/span><br /><hr /><br />"+createdContent;
+			}
+		</script>
+</head>
+<body>
+		<div id="leftbox">
+			<a href="http://www.giosconcept.com" id="ContinueShopping">
+				&laquo; Continue Shopping
+			</a>
+			<br>
+			<h2>
+			<strong>
+			Welcome to Gio's Concept.</strong><br></h2>
+			We are always happy to hear from you. Should you wish to contact us please use the Contact Form below.
+			
+			<br>
+			<form id="contact_form" action="#" method="get">
+				<fieldset class="frmcontact">
+				<ul>
+				<li>
+					<label> Name:</label> <input id="name" type="text" class="input-text" name="txtname" autocomplete="off">
+				</li>
+				<li>
+					<label> Email:</label> <input id="email" type="text" class="input-text" name="txtemail" autocomplete="off">
+				</li>
+				<li>
+					<label> Order Number:</label> <input id="ordno" type="text" class="input-text" name="txtorderno" autocomplete="off">
+				</li>
+				<li>
+					<label> Details:</label> <textarea id="details" class="text-area" cols="20" rows="2" name="txtdetails"></textarea>
+				</li>
+				<li class="action">
+					<input type="submit" title="Send this query" value="SEND MESSAGE" class="primary-action send-message" id="sendmessage" name="cmdsendmsg">
+				</li>
+				</ul>
+				</fieldset>
+			</form>
+		</div>
+		<br>
+		
+		<div class="alternate_contact">
+		Alternatively, you can call Customer Support between 10:00am and 5:30pm Monday to Saturday. 
+		<p>
+		UK - 01553 692 896
+		</p>
+		<p><strong>International</strong> – 0044 (0) 1553 692 896</p>
+		<br>
+		Outside these times, please email us at <span class="email">support@giosconcept.com </span>
+		<br><br>
+		Should you wish to contact us via post, our address is:
+		<p>
+		103 High Street<br>
+		King's Lynn<br>
+		Norfolk<br>
+		England<br>
+		PE30 1BW
+		</p>
+		<span class="email">
+		<a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=gios+concept&sll=53.800651,-4.064941&sspn=12.918331,46.40625&ie=UTF8&ll=52.761074,0.399628&spn=0.006454,0.022659&z=14&iwloc=A&cid=52753490,395400,3782728676592677543&output=embed&s=AARTsJoypCXacm0HyVekGMvnOir5qEs9DQ">
+			Get Direction
+		</a>
+		</span>
+		<p>
+		© 2010 GIOSCONCEPT<br>
+		The website is owned and operated by:<br>
+		Azam Bros Limited, trading as Gio’s Concept<br>
+		Registered in England.<br>
+		Company No. 02939198 <br>
+		</p>
+		</div>
+		<div id="centerbox">
+			
+		</div>
+
+		<div id="rightbox">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		</div>
+</body>
+</html>

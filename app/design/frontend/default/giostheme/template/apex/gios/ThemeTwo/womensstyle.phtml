@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Mens Style Pick</title>
+    <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/mensstyle/style/StyleSheet.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+
+    <!--[if IE 6]>
+	<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+	<script>
+		DD_belatedPNG.fix('#preview_inner div a');
+	</script>
+	<![endif]--> 
+
+
+    <style type="text/css">
+		#preview_wrap {
+			margin: 0 auto;
+			padding: 22px;
+			width: 450px; 
+			background: url('bg_preview.gif') top left no-repeat;
+		}
+
+		#preview_outer {
+			overflow: hidden;
+			width: 450px; 
+			position: relative;
+		}
+
+		#preview_inner {
+			text-align: left;
+			position: relative;
+		}
+		
+		
+		#preview_inner div {
+			float: left;
+			width: 450px; 
+			height: 720px;
+			position: relative;
+			
+		}
+		
+		
+		#preview_inner div a {
+			
+			position: absolute;
+			bottom: 0;
+			top:540px;
+			left: 0;	
+			display: block;
+			width: 99%;
+			padding: 20px 10px 20px 10px;
+			color: #000;
+			text-decoration: none;
+			font-size: 12px;
+			line-height:20px;
+		}
+		
+		#preview_inner div a p { text-align: right; padding-right:20px; color:#0066FF; text-transform:uppercase; text-decoration:underline;}
+		    #preview_inner div a span { font-weight:bold; }
+			#preview_inner div a p:hover { text-decoration:none;}
+			
+
+       
+
+		#thumbs {
+			padding-top: 0px;
+			position: relative;
+			text-align: center;	
+		}
+
+		#thumbs div {
+			
+			width: 160px;
+			height: 285px;
+			cursor: pointer;
+			float:left;
+			margin-left:7px;
+			margin-right:6px;
+		}
+		    
+		   
+    /*
+		#arrow {
+			position: absolute;
+			top: -13px;
+			background: url('bg_arrow.gif') top center no-repeat;
+			width: 104px;
+			height: 39px;
+			display: none;
+		}
+        */
+
+	</style>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        // Save  the jQuery objects for later use.
+	        var outer = $("#preview_outer");
+	        var arrow = $("#arrow");
+	        var thumbs = $("#thumbs div");
+
+	        var preview_pos;
+	        var preview_els = $("#preview_inner div");
+	        var image_width = preview_els.eq(0).width(); // Get width of imaages
+
+	        // Hook up the click event
+	        thumbs.click(function () {
+	            // Get position of current image
+	            preview_pos = preview_els.eq(thumbs.index(this)).position();
+
+	            // Animate them!
+	            outer.stop().animate({ 'scrollLeft': preview_pos.left }, 500);
+	            arrow.stop().animate({ 'left': $(this).position().left }, 500);
+	        });
+
+	        // Reset positions on load
+	        arrow.css({ 'left': thumbs.eq(0).position().left }).show();
+	        outer.animate({ 'scrollLeft': 0 }, 0);
+
+	        // Set initial width
+	        $("#preview_inner").css('width', preview_els.length * image_width);
+	    });
+	</script>
+</head>
+<body>
+        
+        <div id="container">
+        
+            <!--LEFT SIDE -->
+
+                <div class="Lside">
+
+                    <div id="preview_wrap">
+			            <div id="preview_outer">
+				            <div id="preview_inner">
+					           
+                                <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-1-Miss-Sixty-Brigittas-Rosso-Shoes.jpg" alt="" />
+                                    <a href="<?php echo $this->getBaseUrl();?>miss-sixty-brigittas-rosso-shoes.html">
+                                        <span>Miss Sixty Brigittas Rosso Shoes</span><br /><br />
+
+                                        Miss Sixty is exclusively dedicated to women. This pair of heels are dedicated to you. Beautifully and elegant, these will stand you apart this summer. Take a look and try a pair.
+                                        
+                                        <p>SHOP Miss Sixty Brigittas Rosso Shoes</p>
+
+                                    </a>
+                                    
+                                    
+					            </div>
+					            <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-2-Vans-Burlap-Fedora-Onyx.jpg" alt="" />
+                                    <a href="<?php echo $this->getBaseUrl();?>vans-burlap-fedora-onyx.html">
+                                        <span>Vans Burlap Fedora Onyx</span><br /><br />
+                                        The famed fedora style dates back to the savvy looks of the 1920s, and has since worked its way into the world of women's high fashion. The Burlap Fedora offers an especially sophisticated look.
+                                        <p>SHOP Vans Burlap Fedora Onyx</p>
+                                    </a>
+					            </div>
+
+                                  <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-3-Firetrap-Lava-Kaydet-Long-Sleeve-Tee.jpg" alt="" />
+                                      <a href="<?php echo $this->getBaseUrl();?>firetrap-lava-kaydet-long-sleeve-tee.html">
+                                        <span>Firetrap Lava Kaydet Long Sleeve Tee</span><br /><br />
+                                            Relax into the new season with our classic long-sleeve, fitted jersey tee. Perfect for adding a burst of colour this summer. 
+                                        <p>SHOP Firetrap Lava Kaydet Long Sleeve Tee</p>
+                                    
+                                      </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-4-Iron-Fist-Ruff-Rider-Black-Platform.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>iron-fist-ruff-rider-black-platform.html">
+                                        <span>Iron Fist Ruff Rider Black Platform</span><br /><br />
+                                            Iron Fist are famed for their phenomenal artwork to inspire unique, raw and impulsive designs. One of the hottest brands of the moment; creative clothing you won't find on anyone else.
+                                        <p>SHOP Iron Fist Ruff Rider Black Platform</p>
+                                    
+                                     </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-5-Fox-Explosion-Tote-Black-Bag.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>fox-explosion-tote-black-bag.html">
+                                        <span>Fox Explosion Tote Black Bag</span><br /><br />
+                                            This Fox purse will cause a fashion explosion. Take a closer look and be the hottest girl in town. A very versatile bag for all summer occasions.
+ 
+                                        <p>SHOP Fox Explosion Tote Black Bag</p>
+                                    
+                                    
+                                     </a>
+					            </div>
+
+                                 <div>
+						            <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Main-image-left-6-Fitflop-Frou-Electric-Indigo.jpg" alt="" />
+                                     <a href="<?php echo $this->getBaseUrl();?>fitflop-frou-electric-indigo.html">
+                                    
+                                        <span>Fitflop Frou Electric Indigo</span><br /><br />
+                                        The fabulous, frilly, floral-inspired new FROU piles delicate layers of folded suede ruffles top-and-centre foot. It's fun and feminine! Get yours here.
+                                        <p>SHOP Fitflop Frou Electric Indigo</p>
+                                    
+                                    
+                                     </a>
+					            </div>
+					            
+				            </div>
+			            </div>
+		            </div>
+                 </div>
+                   
+
+            <!--RIGHT SIDE-->
+                <div class="Rside">
+                    
+                        <p style="padding: 0px; margin: 0px">
+                            <img align="right" alt="" src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Header-Right.jpg" /></p><br /><br />
+                    <div id="thumbs">
+			              <br /><br /><br />
+			            <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-1-Miss-Sixty-Brigittas-Rosso-Shoes.jpg" alt="" /> Miss Sixty Brigittas<br />Rosso Shoes</div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-2-Vans-Burlap-Fedora-Onyx.jpg" alt="" /> Vans Burlap<br />Fedora Onyx</div>
+			            <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-3-Firetrap-Lava-Kaydet-Long-Sleeve-Tee.jpg" alt="" /> Firetrap Lava Kaydet<br /> Long Sleeve Tee </div>
+                      
+                        
+			        
+                       
+					    <br /><br /><br />
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-4-Iron-Fist-Ruff-Rider-Black-Platform.jpg" alt="" /> Iron Fist Ruff<br /> Rider Black Platform </div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-5-Fox-Explosion-Tote-Black-Bag.jpg" alt="" /> Fox Explosion Tote<br />Black Bag</div>
+                        <div><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/womensstyle/images/Small-image-right-6-Fitflop-Frou-Electric-Indigo.jpg" alt="" /> Fitflop Frou<br />Electric Indigo</div>
+						
+                        <div class="clear"></div>
+                        
+		            </div>
+
+            </div>
+       
+        
+        </div>
+
+
+</body>
+</html>

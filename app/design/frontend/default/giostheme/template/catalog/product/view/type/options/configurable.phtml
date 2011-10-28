@@ -1,0 +1,84 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_blank
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+?>
+
+<script type="text/javascript">
+	function checkgender()
+	{
+		var reg = /women/;
+		if(reg.test(document.URL) == true)
+		{
+		    document.getElementById('sizelink').href ="<?php echo $this->getSkinUrl(); ?>images/sizeguide/Sizeguide-Womens.jpg";
+			document.getElementById('sizelink').rel = "lightbox";
+		}
+		else
+		{
+		    document.getElementById('sizelink').href ="<?php echo $this->getSkinUrl(); ?>images/sizeguide/Sizeguide-mens.jpg";
+			document.getElementById('sizelink').rel = "lightbox";
+		}
+	}
+</script>
+
+<div id="positionwrapper" style="position:relative; padding:0px;margin:0px; height:80px;">
+
+	<?php if ($_product->isSaleable() && count($_attributes)):?>
+		<dl>
+		<?php foreach($_attributes as $_attribute): ?>
+			<dd <?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
+			  <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" style="position:relative; display:inline; float:left; border:1px solid #CCCCCC;" class="required-entry super-attribute-select">
+			  </select>
+			</dd>	
+		<?php endforeach; ?>
+		</dl>
+		
+		<!--Size Link-->
+		<a id="sizelink" href="" target="_blank" style="position:absolute; display:inline; float:left; left:150px; top:2px;" onclick="checkgender()">
+			<img src="<?php echo $this->getSkinUrl(); ?>images/Sizeguide-button.png" alt="NotFound" />
+		</a>
+		<br />
+		
+		<!--Add to Cart button-->
+		<a class="addtobag" onclick="productAddToCartForm.submit(); return false;"></a>
+		
+		<!--
+		<?php if ($this->hasRequiredOptions()):?>
+			<p class="required"><?php echo $this->__('* Required Fields') ?></p>
+		<?php endif;?>
+		-->
+		
+
+</div>
+	
+<script type="text/javascript">
+	var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+</script>
+	
+<?php endif;?>

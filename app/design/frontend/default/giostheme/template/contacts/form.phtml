@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Contact us</title>
+    <link href="<?php echo $this->getSkinUrl()?>css/contactstyle.css" rel="stylesheet" type="text/css" />
+			
+
+	<!------------------------>
+	<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="page-head">
+    <h3><?php //echo Mage::helper('contacts')->__('Contact Us') ?></h3>
+</div>
+<form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post">
+    <fieldset class="frmcontact">
+        <h4 class="legend"><?php echo Mage::helper('contacts')->__('Contact Information') ?></h4>
+        <ul>
+        <li>
+                <div class="input-box">
+                    <label for="name"><?php echo Mage::helper('contacts')->__('Name') ?> <span class="required">*</span></label><br />
+                    <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Name') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserName()) ?>" class="required-entry input-text" type="text" />
+                </div>
+
+                <div class="input-box">
+                    <label for="email"><?php echo Mage::helper('contacts')->__('Email') ?> <span class="required">*</span></label><br />
+                    <input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Email') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserEmail()) ?>" class="required-entry input-text validate-email" type="text" />
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="input-box">
+                    <label for="telephone"><?php echo Mage::helper('contacts')->__('Order Number') ?></label><br />
+                    <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Telephone') ?>" value="" class="input-text" type="text" />
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="input-box">
+                    <label for="comment"><?php echo Mage::helper('contacts')->__('Details') ?></label><br />
+                    <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Comment') ?>" class="required-entry input-text" style="height:150px;width:525px;" cols="50" rows="5"></textarea>
+                </div>
+                </li>
+                </ul>
+    </fieldset>
+    <div class="button-set">
+        <p class="required"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+        <button class="primary-action" type="submit"><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></button>
+    </div>
+</form>
+<br>
+		
+		<div class="alternate_contact">
+		Alternatively, you can call Customer Support between 10:00am and 5:30pm Monday to Saturday. 
+		<p>
+		UK - 01553 692 896
+		</p>
+		<p><strong>International</strong> &#8722; 0044 (0) 1553 692 896</p>
+		<br>
+		Outside these times, please email us at <span class="email">support@giosconcept.com </span>
+		<br><br>
+		Should you wish to contact us via post, our address is:
+		<p>
+		103 High Street<br>
+		King's Lynn<br>
+		Norfolk<br>
+		England<br>
+		PE30 1BW
+		</p>
+		<br><br>
+		<span class="email">
+		<a href="http://maps.google.co.uk/maps?f=q&hl=en&geocode=&q=gios+concept&sll=53.800651,-4.064941&sspn=12.918331,46.40625&ie=UTF8&ll=52.761074,0.399628&spn=0.006454,0.022659&z=14&iwloc=A&cid=52753490,395400,3782728676592677543&output=embed&s=AARTsJoypCXacm0HyVekGMvnOir5qEs9DQ">
+			Get Direction
+		</a>
+		</span>
+		<p>
+		&copy;2010 GIOSCONCEPT<br>
+		The website is owned and operated by:<br>
+		Azam Bros Limited, trading as Gio&#8216;s Concept<br>
+		Registered in England.<br>
+		Company No. 02939198 <br>
+		</p>
+		</div>
+<script type="text/javascript">
+    var contactForm = new VarienForm('contactForm', true);
+</script>
+</body>
+</html>

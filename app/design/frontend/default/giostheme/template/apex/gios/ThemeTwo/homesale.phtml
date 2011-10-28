@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"> <!--html opening tag-->
+
+	<head > <!--HEAD STARTS -->
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+		<!--<link href="<?php //echo $this->getSkinUrl();?>ThemeTwo/homesale/style.css" rel="stylesheet" type="text/css" />-->
+		<script type="text/javascript" src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/script/cycle-plugin.js"></script>
+		
+		<!-- <link href="<?php //echo //$this->getSkinUrl();?>ThemeTwo/homesale/style.css" rel="stylesheet" type="text/css" /> -->
+				
+		<script type="text/javascript">
+			/* 	######SLIDE SHOW########*/
+			$('#div1 .featured_box').cycle({
+			fx: 		'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			speed:		'1200',
+			timeout:	'5000',
+			prev:		'#div1 #featured_box .left_nav a',
+			next:		'#div1 #featured_box .right_nav a',
+			pager:		'#div1 #featured_box .slide_nav'
+			});
+		</script>
+	
+	</head>
+	
+	
+	<body> <!--  body starts -->
+		<div id="_container"> <!-- container/wrapper div starts-->
+			
+		<!--	
+                    <div id="div0">  
+				<div class="div1">
+					<span class="span1">FREE DELIVERY ON UK ORDERS</span>
+					<span class="span2"><a href="<?php //echo $this->getBaseUrl()?>delivery">more...</a></span>
+				</div>
+			
+				<div class="div2">
+					<span class="span1"><a href="<?php //echo $this->getBaseUrl()?>international">more...</a></span>
+					<span class="span2">REST OF WORLD LOW RATES</span>
+				</div>
+				
+				<div class="clear_floats"></div> 
+			</div>
+			
+            -->
+			<div id="div1"> <!-- #div 1 starts -->
+				<div id="featured_box">
+					<div class="featured_box">
+					    <a href="<?php echo $this->getBaseUrl();?>#"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/slide-brands-international.jpg" alt="slide-image" height="315px" width="720px"/></a>
+						<a href="<?php echo $this->getBaseUrl();?>men/jeans-trousers.html"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/slide-men-jeans.jpg" alt="slide-image" height="315px" width="720px"/></a>
+<!--						
+						<a href="<?php echo $this->getBaseUrl();?>men/jeans-trousers.html"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/8.jpg" alt="slide-image" height="315px" width="720px"/></a>
+						<a href="<?php echo $this->getBaseUrl();?>men/beats-by-dr-dre.html"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/7.jpg" alt="slide-image" height="315px" width="720px"/></a>
+						<a href="<?php echo $this->getBaseUrl();?>women/havaianas.html"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/1.jpg" alt="slide-image" height="315px" width="720px"/></a>
+						<a href="<?php echo $this->getBaseUrl();?>women/havaianas.html"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/2.jpg" alt="slide-image" height="315px" width="720px"/></a>
+						<a href="<?php echo $this->getBaseUrl();?>designer"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/3.jpg" alt="slide-image" height="315px" width="720px"/></a>
+-->						
+					</div>
+					
+					<div class="slide_nav">
+						
+					</div>
+					
+					<div class="clear_floats"></div> <!-- clears the float -->
+					
+				</div>
+			
+			
+	
+				<div class="content_box">
+					<div class="link_box">
+						<h1>BRANDS - A Sneaky Peek</h1>
+						<div class="line1"></div>
+						<ul>
+							<li><a href="<?php echo $this->getBaseUrl();?>men/converse.html"">Converse</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/roxy.html">Roxy</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/quiksilver.html">Quiksilver</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/bench.html">Bench</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/emu.html">Emu</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/ugg.html">UGG</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/fredperry.html">Fred Perry</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/animal.html">Animal</a></li>
+						</ul>
+						
+						<ul>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/volcom.html">Volcom</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/alpinestars.html">Alpinestars</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/henleys.html">Henleys</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/duckncover.html">Duck and Cover</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/applebottoms.html">Apple Bottoms</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/misssixty.html">Miss Sixty</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/firetrap.html">Firetrap</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/hunter.html">Hunter</a></li>
+						</ul>
+						
+						<ul>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/desigual.html">Desigual</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/drmartens.html">Dr Martens</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/diesel.html">Diesel</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/giogoi.html">Gio Goi</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/lacoste.html">Lacoste</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/rayban.html">Ray-Ban</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/fiorelli.html">Fiorelli</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/nike.html">Nike</a></li>
+						</ul>
+						
+						<ul>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/eastpak.html">EASTPAK</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/timberland.html">Timberland</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/dirtydog.html">Dirty Dog</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/fly53.html">FLY53</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/dvs.html">DVS</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/kswiss.html">K-Swiss</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/gola.html">Gola</a></li>
+							<li><a href="<?php echo $this->getBaseUrl();?>women/ironfist.html">Iron Fist</a></li>
+						</ul>
+						
+						<div class="clear_floats"></div> <!-- clears the float -->
+					</div>
+					
+					<div class="advet_box">
+                                            <a href="<?php echo $this->getBaseUrl()?>women/fitflop.html">
+						<img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/advet.jpg" alt="advertisement image"/>
+                                            </a>
+					</div>
+					
+					<div class="clear_floats"></div> <!-- clears the float -->
+				</div>
+			</div>
+			
+			<div id="div2"><!-- #div 2 starts -->
+				<div class="advet_box1">
+                                    <a href="<?php echo $this->getBaseUrl();?>community/index.php?option=com_k2&view=itemlist&layout=category&task=category&id=9&Itemid=102">
+                                       <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/4.jpg" alt="advertisement image"/>
+                                    </a>   
+				</div>
+				
+				<div class="advet_box2">
+                                    <a href="<?php echo $this->getBaseUrl()?>men/accessories.html?cat=1140">
+                                    <img src="<?php echo $this->getSkinUrl();?>ThemeTwo/homesale/images/5.jpg" alt="advertisement image"/>
+                                    </a>
+				</div>
+			</div>
+			
+			<div class="clear_floats"></div> <!-- clears the float -->
+		</div>
+	</body>
+	
+	
+	</html>
