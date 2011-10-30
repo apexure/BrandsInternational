@@ -1,0 +1,20 @@
+[07-Oct-2011 05:22:57] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/denimcit/public_html/app/code/core/Mage/Core/Model/Mysql4/Abstract.php on line 292
+[07-Oct-2011 05:33:30] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/denimcit/public_html/app/code/core/Mage/Catalog/Model/Url.php on line 692
+[17-Oct-2011 10:51:13] PHP Fatal error:  Out of memory (allocated 17825792) (tried to allocate 8192 bytes) in /home/denimcit/public_html/lib/Zend/Cache/Backend/File.php on line 962
+[17-Oct-2011 14:30:06] PHP Fatal error:  Out of memory (allocated 17825792) (tried to allocate 8192 bytes) in /home/denimcit/public_html/lib/Zend/Cache/Backend/File.php on line 962
+[18-Oct-2011 04:06:25] PHP Fatal error:  Out of memory (allocated 17825792) (tried to allocate 8192 bytes) in /home/denimcit/public_html/lib/Zend/Cache/Backend/File.php on line 962
+[18-Oct-2011 09:46:46] PHP Fatal error:  Out of memory (allocated 57409536) (tried to allocate 48 bytes) in /home/denimcit/public_html/lib/Zend/Db/Statement/Pdo.php on line 290
+[20-Oct-2011 14:25:19] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 262222 bytes) in Unknown on line 0
+[20-Oct-2011 15:49:02] PHP Fatal error:  Out of memory (allocated 19660800) (tried to allocate 55645 bytes) in /home/denimcit/public_html/app/code/core/Mage/Core/Block/Abstract.php on line 888
+[21-Oct-2011 11:04:02] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 454177 bytes) in /home/denimcit/public_html/app/code/core/Mage/Core/Model/Translate/Inline.php on line 204
+[22-Oct-2011 12:04:29] PHP Fatal error:  Out of memory (allocated 20185088) (tried to allocate 262208 bytes) in Unknown on line 0
+[25-Oct-2011 08:22:03] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 262246 bytes) in Unknown on line 0
+[25-Oct-2011 20:14:20] PHP Fatal error:  Out of memory (allocated 19660800) (tried to allocate 32768 bytes) in Unknown on line 0
+[25-Oct-2011 15:37:54] PHP Fatal error:  Class 'Mage' not found in /home/denimcit/public_html/clean.php on line 2
+[26-Oct-2011 13:24:54] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64565 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[27-Oct-2011 17:09:59] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 60751 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[28-Oct-2011 04:24:49] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64559 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[28-Oct-2011 11:00:26] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64583 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[29-Oct-2011 06:14:23] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64587 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[29-Oct-2011 10:04:35] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64563 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056
+[30-Oct-2011 06:56:53] PHP Fatal error:  Out of memory (allocated 20447232) (tried to allocate 64559 bytes) in /home/denimcit/public_html/includes/src/__default.php on line 35056

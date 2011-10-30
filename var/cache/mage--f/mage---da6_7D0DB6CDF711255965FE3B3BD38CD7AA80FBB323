@@ -1,0 +1,25 @@
+<div class="footer">
+    <div style="background-color: #ffffff; width: 1000px; position: relative;">
+<div class="footerhigh"><a class="footerimg"> <!--http://magebrands/community?___SID=U--> <img src="http://magebrands/skin/frontend/default/giostheme/images/footer/footer-community.jpg" alt="Community" /> </a> <a class="footerimg"> <!--http://magebrands/competition?___SID=U --> <img src="http://magebrands/skin/frontend/default/giostheme/images/footer/footer-competitions.jpg" alt="Competitions" /> </a> <a class="footerimg" href="http://magebrands/terms#returns?___SID=U"> <img src="http://magebrands/skin/frontend/default/giostheme/images/footer/footer-returns.jpg" alt="Returns" /> </a> <a class="footerimg"> <!-- http://magebrands/vouchers?___SID=U --> <img src="http://magebrands/skin/frontend/default/giostheme/images/footer/footer-voucher.jpg" alt="Gift Vouchers" /> </a>
+<div class="footersignup"><span class="signupnewsletter">sign up for our newsletter &nbsp;</span> <form id="newsletter-validate-detail" action="http://magebrands/newsletter/subscriber/new/?___SID=U" method="post"> <input id="newsletter" name="email" type="text" /> <button class="button"><span>Subscribe</span></button> </form></div>
+<hr size="1" />
+<br />
+<div class="footlinkbox">
+<h5>Shopping with us</h5>
+<!-- <a href="/delivery" _mce_href="/delivery">Flexible Delivery</a><br /> <a href="/delivery" _mce_href="/delivery">Free UK Delivery</a><br /> <a href="/international" _mce_href="/international">International Delivery</a><br /> --> 			<a href="http://magebrands/customer/account/login/?___SID=U"></a>My Account<br /> <a href="http://magebrands/terms#delinfo?___SID=U">Delivery</a><br /> <a href="http://magebrands/terms#returns?___SID=U">Returns</a><br /> <a href="http://magebrands/terms#payment?___SID=U">Payment Methods</a></div>
+<div class="footlinkbox">
+<h5>What we offer</h5>
+<a href="http://magebrands/men?___SID=U">Men</a><br /> <a href="http://magebrands/women?___SID=U">Women</a><br /> <!-- <a href="/designer" _mce_href="/designer">Designer</a><br /> --> 			<!-- <a href="/outlet" _mce_href="/outlet">Outlet</a><br /> --> 			<a href="http://magebrands/a-zbrands?___SID=U">Men's Brands</a><br /> <a href="http://magebrands/a-zbrandsw?___SID=U">Women's Brands</a></div>
+<div class="footlinkbox">
+<h5>Need any help?</h5>
+<a href="http://magebrands/helpcontact?___SID=U"></a>Track Order<br /> <a href="http://magebrands/helpcontact?___SID=U"></a>Contact<br /> <a href="http://magebrands/terms#verification?___SID=U"></a>Secure Shopping<br /> <a href="http://magebrands/terms?___SID=U"></a>Terms &amp; Conditions<br /> <!-- <a href="/brandsaz" _mce_href="/brandsaz" ></a>Store Directory</a><br /> --> 			<!-- <a href="http://www.giosconcept.com/catalogsearch/term/popular/?SID=806e90ee151b39b2bf6f64cd8aa08dbe" _mce_href="http://www.giosconcept.com/catalogsearch/term/popular/?SID=806e90ee151b39b2bf6f64cd8aa08dbe" ></a>Search Terms</a><br /> --></div>
+<div class="footlinkbox">
+<h5>The Brands International</h5>
+<a href="http://magebrands/aboutGios?___SID=U">About Us</a><br /> <a href="http://magebrands/history?___SID=U">Our History</a><br /> <a href="http://magebrands/team?___SID=U"></a> Meet The Team<br /> <a>Lifestyle Scouts</a><br /> <!-- href="http://magebrands/lifestylescouts?___SID=U" --></div>
+<div class="footlinkbox">
+<h5>Join Us</h5>
+<a href="http://magebrands/community?___SID=U">Community</a><br /> <!-- http://magebrands/gc_blog?___SID=U --> <a>Blog *Coming Soon!*</a><br /> <a href="http://en-gb.facebook.com/pages/Gios-Concept/190638650973524">Facebook</a><br /> <a href="http://twitter.com/gios_concept">Twitter</a></div>
+<div class="footerlow">&copy; 2011 BrandsInternational.co.uk | <a rel="nofollow" href="http://magebrands/privacypolicy?___SID=U">Privacy</a> | <a rel="nofollow" href="http://magebrands/terms?___SID=U">Terms &amp; Conditions</a> | <a href="http://magebrands/catalog/seo_sitemap/category/?___SID=U"> Category Sitemap</a>|<a href="http://magebrands/catalog/seo_sitemap/product/?___SID=U"> Product Sitemap</a> <img src="http://magebrands/skin/frontend/default/giostheme/images/footer/securepayments.png" alt="" /></div>
+</div>
+</div>    <address></address>
+</div>
