@@ -984,7 +984,7 @@ line-height:2em;
 .opc .allow .step-title { cursor:pointer; }
 .opc .active {}
 .opc .active .step-title { background-color:#ccc; cursor:default; }
-.opc .step { border-top:1px solid #ddd; padding:10px; position:relative; }
+.opc .step { border-top:1px solid #ddd; padding:10px; padding-bottom:30px;  position:relative; }
 .opc .step .tool-tip { right:10px; }
 .opc .order-review {}
 
