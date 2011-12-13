@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+			#_containerx #div0											{height:32px;background-color:#778aa8;margin:10px 0px 16px;border-top:1px solid #000;}
+			#_containerx #div0 .div1										{border-right:2px solid #000;}
+			#_containerx #div0 a											{color:#000;text-decoration:none;}
+			#_containerx #div0 a:hover									{color:#eee;text-decoration:underline;}
+			#_containerx #div0 .div1, #_containerx #div0 .div2				{float:left;border-bottom:2px solid #000; width:498px;height:32px;}
+			#_containerx #div0 .div1 .span1								{display:block; text-align:left;width:380px;float:left;margin:5px 0px 0px 40px;}
+			#_containerx #div0 .div1 .span2								{display:block; text-align:left;float:left;margin:5px 0px 0px;}
+			#_containerx #div0 .div2 .span1								{display:block; text-align:left;float:left;margin:5px 0px 0px 10px;}
+			#_containerx #div0 .div2 .span2								{display:block; text-align:right;width:420px;float:left;margin:5px 0px 0px;}

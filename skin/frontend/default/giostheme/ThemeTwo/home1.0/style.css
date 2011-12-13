@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container													{width:1000px;margin:0px auto;}	
+			#_containerx #div0											{height:32px;background-color:#778aa8;margin:10px 0px 16px;border-top:1px solid #000;}
+			#_containerx #div0 .div1										{border-right:2px solid #000;}
+			#_containerx #div0 a											{color:#000;text-decoration:none;}
+			#_containerx #div0 a:hover									{color:#eee;text-decoration:underline;}
+			#_containerx #div0 .div1, #_containerx #div0 .div2				{float:left;border-bottom:2px solid #000; width:498px;height:32px;}
+			#_containerx #div0 .div1 .span1								{display:block; text-align:left;width:380px;float:left;margin:5px 0px 0px 40px;}
+			#_containerx #div0 .div1 .span2								{display:block; text-align:left;float:left;margin:5px 0px 0px;}
+			#_containerx #div0 .div2 .span1								{display:block; text-align:left;float:left;margin:5px 0px 0px 10px;}
+			#_containerx #div0 .div2 .span2								{display:block; text-align:right;width:420px;float:left;margin:5px 0px 0px;}
+			
+			#container #div1											{width:1000px;height:660px;}
+			#container #div1 #featured_box								{width:1000px;height:660px;margin:0px;overflow:hidden;}
+			#container #div1 .slide_nav									{height:23px;width:72px; position:relative;z-index:10;margin:5px auto;}
+			#container #div1 .slide_nav a								{background-color:#000000; color:#C8fffA;-moz-border-radius:14px;border:1px solid #666;
+																		-webkit-border-radius:14px; display:block; margin:0px 4px 0px 0px; float:left; 
+																		font-size:2px; block;height:12px; width:12px; text-decoration:none;border-radius:14px;}
+															
+			#container #div1 .slide_nav a.activeSlide					{background-color:#FFF;color:#FFF;-moz-box-shadow:0px 0px 2px #000;}
+			
+			#div2														{margin:5px 0px;overflow:hidden;}
+			.bibox														{border:1px solid #000;width:326px; height:410px;float:left;margin:0px 8px 0px 0px;}
+			.bibox_last													{margin-right:0px!important;}			
+			.bibox .title_image											{margin:15px 0px 20px;}
+			p.bibox_info												{margin:0px 10px;font-size:11px;height:50px;text-align:center;}
+			.bibox .splash_image										{height:206px;width:100%;}
+			.bibox .socialicons											{margin:20px auto 10px;height:24px;width:144px;list-style:none;}
+			.bibox .socialicons li										{float:left;margin:0px 3px 0px 0px;}
+			.bibox .socialicons li:hover								{border-top:2px solid #FFF;}
+			.bibox .socialicons li.soc_fb								{background:url('images/social_sprite.jpg')0 0; height:23px; width:24px;}
+			.bibox .socialicons li.soc_tw								{background:url('images/social_sprite.jpg')-25px 0; height:23px; width:32px;}
+			.bibox .socialicons li.soc_s								{background:url('images/social_sprite.jpg')-63px 0; height:23px; width:24px;}
+			.bibox .socialicons li.soc_sh								{background:url('images/social_sprite.jpg')-90px 0; height:23px; width:24px;}
+			.bibox .socialicons li.soc_pl								{background:url('images/social_sprite.jpg')-115px 0; height:23px; width:24px;}
+			.bibox .socialicons li a									{widht:23px;height:23px;display:block;}
+			.bibox a.bi_link											{display:block;margin:20px 0px 0px;color:#000;text-transform:uppercase;font-size:18px;
+																		text-weight:bolder;text-decoration:none;text-align:center;}
+			.bibox a.bi_link:hover										{color:#999;}
+			
+			#div3														{margin:0px 0px 20px;}
+			#div3 a.bi_link												{float:left;margin:0px 15px;color:#000;text-decoration:none;}
+			#div3 a.bi_link:hover										{color:#999;}
+			.line101													{border-top:1px dotted #000; width:455px;float:left;margin:10px 0px 0px;}
+			
+			.clear_floats												{clear:both;}
+			
+		/*	#div4														{margin:50px auto 30px;border-top:4px solid #000;border-bottom:1px dotted #000;
+																			padding:20px 0px;}
+			#frm_newsltr												{display:block;width:740px;margin:0 auto;}
+			#frm_newsltr h1												{top:20px;color:#CCC;font-size:18px;float:left;}
+			#frm_newsltr #email_id										{border:1px solid #CCC;height:26px; width:320px; margin-left:20px; float:left;
+																			color:#666; font-size:11px;padding:0px 2px;}
+			#frm_newsltr #email_id:active								{border:1px solid #000;}
+			#frm_newsltr .nl_btn										{margin:2px 0px 0px 10px;float:left;}
+			#frm_newsltr .nl_btn:hover									{border-top:1px solid #FFF;} */
