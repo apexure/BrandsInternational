@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/script/cycle-plugin.js"></script>
+	 <!--	<link href="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/reset.css" rel="stylesheet" type="text/css" media="screen" /> -->
+     <!--   <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/homenew/style.css" rel="stylesheet" type="text/css" /> -->
+        
+        
+        
+        <script type="text/javascript">
+			/* 	######SLIDE SHOW########*/
+			$('#div1 #featured_box').cycle({
+			fx: 		'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+			speed:		'1200',
+			timeout:	'5000',
+			prev:		'#div1 #featured_box .left_nav a',
+			next:		'#div1 #featured_box .right_nav a',
+			pager:		'#div1 .slide_nav'
+			});
+		</script>
+		
+</head>
+
+<body>
+
+<div id="container"> <!-- container/wrapper div starts-->
+			
+	  <!--     	<div id="div0">
+				<div class="div1">
+					<span class="span1">FREE DELIVERY ON UK ORDERS</span>
+					<span class="span2"><a href="<?php //echo $this->getBaseUrl()?>delivery">more...</a></span>
+				</div>
+			
+				<div class="div2">
+					<span class="span1"><a href="<?php //echo $this->getBaseUrl()?>international">more...</a></span>
+					<span class="span2">REST OF WORLD LOW RATES</span>
+				</div>
+				
+				<div class="clear_floats"></div>
+			</div>  -->
+	
+			
+			<div id="div1"> <!-- #div 1 starts -->
+				
+				<div id="featured_box">
+                  <a href="<?php echo $this->getBaseUrl();?>#"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/main_addvt.gif" alt="slide-image"/></a>
+                  <a href="<?php echo $this->getBaseUrl();?>#"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/g-star-advert.gif" alt="slide-image"/></a>
+			      <a href="<?php echo $this->getBaseUrl();?>#"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/humor-advert.gif" alt="slide-image"/></a>
+				  <a href="<?php echo $this->getBaseUrl();?>#"><img src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/miss_sixty-advert.gif" alt="slide-image"/></a>
+					
+				</div>
+				
+				<div class="slide_nav">
+				</div>
+			</div>
+			
+			<div class="clear_floats"></div> <!-- clears the float -->
+			
+			<div id="div2"> <!--#div 2-->
+				<div class="bibox">
+                    <img class="splash_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/box1.gif" alt="image"/>
+                    <img class="title_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/bx1h.gif" alt="image"/>
+					
+					<p class="bibox_info" style="color:#333333;">
+					Discover daily fashion news, competitions and sale alerts on Facebook and Twitter, plus, see which new trends are emerging on street.
+					</p>
+					<ul class="socialicons">
+						<li class="soc_fb"><a href="http://www.facebook.com/pages/Brands-International/336304553050825"></a></li>
+						<li class="soc_tw"><a href="http://twitter.com/#!/BrandsInt"></a></li>
+						<li class="soc_s"><a href="#"></a></li>
+						<li class="soc_sh"><a href="#"></a></li>
+						<li class="soc_pl"><a href="https://plus.google.com/b/102532440085343420438/102532440085343420438/posts"></a></li>
+						<li class="clear_floats"></li>
+					</ul>
+				</div>
+				
+				
+				<div class="bibox">
+					<img class="splash_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/box2.gif" alt="image"/>
+					<img class="title_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/bx2h.gif" alt="image"/>
+					<p class="bibox_info" style="color:#333333;">
+					Everybody loves bargains, so we give you a chance to grab one. Unbelievable prices only at brandsbidding.co.uk
+					</p>
+					<a class="bi_link" href="http://brandsbidding.co.uk/">visit brandsbidding >></a>
+				</div>
+				
+				
+				<div class="bibox bibox_last">
+					<img class="splash_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/box3.gif" alt="image"/>
+					<img class="title_image" src="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/images/bx3h.gif" alt="image"/>
+					<p class="bibox_info" style="color:#333333;">
+					Amazing loks and outfit ideas for the festive season created by our fashion community.
+					</p>
+					<a class="bi_link" href="http://community.brandsinternational.co.uk">community page >></a>
+				</div>
+				
+				<div class="clear_floats"></div> <!-- clears the float -->
+				
+			</div>
+			
+			<div id="div3">  <!--#div3-->
+				<div class="line101"></div>
+				<a class="bi_link" href="<?php echo $this->getBaseUrl();?>#">About Us</a>
+				<div class="line101"></div>
+				<div class="clear_floats"></div> <!-- clears the float -->
+			</div>
+			
+		
+		</div> <!--container ends-->
+
+</body>
+</html>

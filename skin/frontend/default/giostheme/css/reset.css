@@ -22,7 +22,7 @@
  * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-* { margin:0; padding:0; }
+* { margin:0; padding:0;}
 
 body          { /*background-color:#000000;*/ center;font:12px/1.5 Verdana, Geneva, sans-serif; color:#000; text-align:center;background-attachment: fixed; }
 
@@ -46,6 +46,7 @@ fieldset      { border:0;}
 legend        { display:none; }
 
 /* Table */
+
 table         { border:0; border-collapse:collapse; border-spacing:0; empty-cells:show; font-size:100%; }
 caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
 

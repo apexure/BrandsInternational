@@ -1091,7 +1091,7 @@ line-height:2em;
 {
 border-width: medium; /* border above the footer*/
 border-color: #000000;
-border-style: solid none none none;
+/*border-style: solid none none none; */
 background-color:white;
 }
 .footer p { text-align:right; }
@@ -1172,11 +1172,11 @@ img.b {
 	}
 	
 /* position for footer newseltter signup */
-.footersignup form
+/*.footersignup form
 {
 	position: relative;
 	top: -5px;
-}
+} */
 
 .footersignup
 {
@@ -1193,14 +1193,14 @@ img.b {
 	padding: 0 5px 0 0;
 	position: relative;
 	top: -2px;
-}*/
+}
 
 .footersignup form button span
 {
 	font-size: 10px;
 }
 
-
+*/
 
 /* Invisible left hotspot */
 div.scrollingHotSpotLeft
@@ -1986,7 +1986,7 @@ li.recentlyviewed
 	width:150px;
 	margin: 5px 0 7px 0;
 }
-.footerhigh
+/*.footerhigh
 {
 	position:relative; 
 	width:1000px;
@@ -1994,7 +1994,7 @@ li.recentlyviewed
 	display:block;
 	padding-top:10px;
 	margin-bottom:25px;
-}
+} */
 .footerimg
 {
 	position:relative; 
@@ -2004,7 +2004,21 @@ li.recentlyviewed
 	float:left;
 	padding-right:7px;
 }
-.footersignup
+
+/* newsletter */
+.clear_floats												{clear:both;}
+			
+			#footersignup														{margin:40px auto 30px;border-top:4px solid #000;
+																			padding:20px 0px;}
+			#newsletter-validate-detail												{display:block;width:740px;margin:0 auto;}
+			#newsletter-validate-detail h1												{top:20px;color:#CCC;font-size:18px;float:left;}
+			#newsletter-validate-detail #newsletter										{border:1px solid #CCC;height:26px; width:320px; margin-left:20px; float:left;
+																			color:#666; font-size:11px;padding:0px 2px;}
+			#newsletter-validate-detail #newsletter:active								{border:1px solid #000;}
+			#newsletter-validate-detail .nl_btn										{margin:2px 0px 0px 10px;float:left;}
+			#newsletter-validate-detail .nl_btn:hover									{border-top:1px solid #FFF;}
+
+/*.footersignup
 {
 	position:relative;
 	display:inline-block;
@@ -2014,13 +2028,14 @@ li.recentlyviewed
 	font-family:Arial;
 	font-size:12px;
 	font-weight:bold;
-}
+} 
 span.signupnewsletter
 {
 	position:relative;
 	top:-5px;
 
-}
+} */
+
 .footlinkbox
 {
 	position:relative;
@@ -2058,13 +2073,15 @@ text-decoration: none; 	}
 	width:1000px;
 	float:left;
 	font-size:10px;
-	padding-top:10px;
-	background-color:#white;
+	margin-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	background-color:#f9f9f9;
 	line-height:23px;
 }
 .footerlow img
 {
-	float:right;
+	float:left;;
 }
 
 a.addtobag
@@ -2211,6 +2228,25 @@ margin-left:590px;
 height:100px;
 
  }
+ 
+ .payments
+{
+width:1000px;
+float:left;
+padding-top:20px;
+border-bottom:1px groove;
+padding-bottom:10px;
+
+
+}
+
+.footerlowlinks
+{
+width:1000px;
+padding-top:15px;
+padding-bottom:20px;
+
+}
 
 
 /*==========change ends here===============*/
