@@ -218,7 +218,7 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { overflow:visible; width:auto; border:0; padding:0 0 0 12px; background-color:#000000; cursor:pointer; -webkit-border-fit:lines; /* <- Safari & Google Chrome Fix */ }
-button.button span { float:left; padding:0 12px 0 0; /*background:url(../images/bkg_button.gif) 100% 50% no-repeat;*/ font:bold 12px/21px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+button.button span { float:left; padding:0 24px 0 0px; /*background:url(../images/bkg_button.gif) 100% 50% no-repeat;*/ font:bold 12px/21px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
 button.disabled {}
 button.disabled span {}
 /* Input & Textarea stretched for 100% */
