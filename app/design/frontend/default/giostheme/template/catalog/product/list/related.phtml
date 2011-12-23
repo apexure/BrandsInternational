@@ -30,9 +30,10 @@
 </style>
 
 <?php if($this->getItems()->getSize()): ?>
-<div id="positionwrapper" style="position:relative;">
-	<div id="relatedlol" style="left:30px; margin-bottom:20px; display:block; width:200px;">
-		<h2 style="font-size:14.4px;"><?php echo $this->__('Other items you may like..') ?></h2>
+<div id="positionwrapper" style="position:relative;width:250px;">
+	<div id="relatedlol" style="left:30px;display:block; width:250px;padding-bottom:30px;border-bottom:1px groove;*border-bottom:2px groove;">
+		<h2 style="font-size:16.4px; font-weight:normal;text-align:center;"><?php echo $this->__('WE RECOMMEND') ?></h2>
+	</div>
 		<div class="block-content">
 			<!-- 
 			<p><?php echo $this->__('Check items to add to the cart or') ?>&nbsp;<a href="#" onclick="selectAllRelated(this); return false;"><?php echo $this->__('select all') ?></a></p>
@@ -48,8 +49,8 @@
 					<?php endif; ?>
 				<?php endif; ?>
 				
-				<span class="item" style="width:125px; height:180px; text-align:center; display:inline-block;  vertical-align: top; margin-right:55px;">
-					<a id="image" href="<?php echo $_item->getProductUrl() ?>" class="product-image"><img style="border:solid #666666 1px; height:125px; width:125px;" src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(100) ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+				<span class="item" style="width:105px; height:180px; text-align:center; display:inline-block;  vertical-align: top;">
+					<a id="image" href="<?php echo $_item->getProductUrl() ?>" class="product-image"><img style="border:solid #666666 1px; height:100px; width:100px;" src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(100) ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
 					<h3 id="name" class="product-name"><a style="color:#666666" href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
 					<p id="price"><?php echo $this->getPriceHtml($_item, true) ?></p>
 					
@@ -63,7 +64,9 @@
 			<?php endforeach ?>
 		
 		</div>
-	</div>
+	<!-- </div> -->
+	
+	
 </div>
 
 <script type="text/javascript">

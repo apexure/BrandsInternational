@@ -58,7 +58,8 @@
         <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
             <?php // Product Image ?>
             <a class="product-image" href="<?php echo $_product->getProductUrl()?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
-                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepFrame(false)->resize(160, 200); ?>" width="160" height="160" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+            
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(false)->resize(160, null); ?>" width="160" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
 
             <?php // Product description ?>
             <div class="product-shop">
@@ -106,7 +107,7 @@
               
                 
                 <a class="product-image" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
-                    <img style="background-color:#FFFFFF;"	 src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepFrame(false) ->backgroundColor(array(5,2,10))->resize(160, 200); ?>" width="160" height="160" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+                    <img style="background-color:#FFFFFF;"	 src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->keepFrame(false) ->backgroundColor(array(5,2,10))->constrainOnly(TRUE)->keepAspectRatio(TRUE)->keepFrame(false)->resize(160, null); ?>" width="160" height="" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
                 <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h3>
                 <?php if($_product->getRatingSummary()): ?>
                 <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>

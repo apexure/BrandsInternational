@@ -51,20 +51,12 @@
 		</div>
 
 		<div class="product-shop">
-			<?php echo $this->getPriceHtml($_product) ?>
+			
 			<div class="product-name">
 				<h2><?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getName()), 'name') ?></h2>
 			</div>
-			
-
-
-			<?php if ($this->canEmailToFriend()): ?>
-				<a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a>
-			<?php endif; ?>
-
-			<?//php echo $this->getReviewsSummaryHtml($_product, false, true)?>
- 
- 
+			<?php 	echo $this->getPriceHtml($_product) ?>
+  
  
 			<?php echo $this->getChildHtml('alert_urls') ?>
 
@@ -72,7 +64,7 @@
 			
 		<?php if ($_description = $this->getChildHtml('description')):?>
 			<div class="description">
-				<h3><?//php echo $this->__('Product Description') ?></h3>
+			<!--	<h3><?//php echo $this->__('Product Description') ?></h3> -->
 				<?php echo $_description ?>
 			</div>
 		<?php endif;?>
@@ -89,7 +81,6 @@
 
 	 <?php echo $this->getChildHtml('product_type_data') ?>
 	<!-- Original Product Tabs, found in Static Blocks -> Product Tabs -->
-	<?//php echo $this->getLayout()->createBlock('cms/block')->setBlockId('product_tabs')->toHtml() ?> 
 	
 		<!--Removing the -->
 		<script language="Javascript" type="text/Javascript">
@@ -100,18 +91,35 @@
 					//Free Returns Code
 					document.getElementById('toptab1').className = 'unselectedtab';
 					document.getElementById('toptab2').className='selectedtab';
+					document.getElementById('toptab0').className='unselectedtab';
 					document.getElementById('tab2').style.display="inline";
 					document.getElementById('tab1').style.display="none";
+					document.getElementById('tab0').style.display="none";
 					/* Effect.BlindUp('tab1');
 					setTimeout("Effect.BlindDown('tab2');",1500); */
 				}
-				else
+				else if (tabfrom == "1")
 				{
 					//Delivery Tab Code
 					document.getElementById('toptab2').className='unselectedtab';
 					document.getElementById('toptab1').className='selectedtab';
+					document.getElementById('toptab0').className='unselectedtab';
 					document.getElementById('tab1').style.display="inline";
 					document.getElementById('tab2').style.display="none";
+					document.getElementById('tab0').style.display="none";
+					/* Effect.BlindUp('tab2');
+					setTimeout("Effect.BlindDown('tab1');",1500); */
+				}
+				
+				else 
+				{
+					//Info Tab Code
+					document.getElementById('toptab2').className='unselectedtab';
+					document.getElementById('toptab1').className='unselectedtab';
+					document.getElementById('toptab0').className='selectedtab';
+					document.getElementById('tab1').style.display="none";
+					document.getElementById('tab2').style.display="none";
+					document.getElementById('tab0').style.display="inline";
 					/* Effect.BlindUp('tab2');
 					setTimeout("Effect.BlindDown('tab1');",1500); */
 				}
@@ -120,20 +128,34 @@
 		
 		<!-- <script type="text/Javascript" src="http://www.azamdevelopment.com/gioslive/js/scriptaculous/prototype.js"> </script>
 		<script type="text/Javascript" src="http://www.azamdevelopment.com/gioslive/js/scriptaculous/scriptaculous.js"> </script> -->
-		<a href="Javascript:void();" onClick="changetab('1');" class="selectedtab" id="toptab1">
+		<a href="Javascript:void();" onClick="changetab('0');" class="selectedtab" id="toptab0" >
+			Info
+		</a>
+		<a href="Javascript:void();" onClick="changetab('1');" class="unselectedtab" id="toptab1">
 			Delivery
+		</a>
 		<a href="Javascript:void();" onClick="changetab('2');" class="unselectedtab" id="toptab2" >
 			Free Returns
 		</a>
 			
 		<div class="tab_container">
-			<div id="tab1" class="tab_content">
-				<p>UK Super Saver: Within 5 working days – FREE</p>
-				<p>UK Standard: Within 3 working days – £4.95 or FREE if you spend over £75</p>
+		
+		    <div id="tab0" class="tab_content">
+			    <h4>ABOUT ME</h4>
+				<p></p></br>
+				<p></p></br>
+				<p></p>
+				<h4>LOOK AFTER ME</h4>
+				<p></p></br>
+				<p>Product Code:</p>
+			</div>
+			<div id="tab1" class="tab_content" style="display:none;">
+				<p>UK Super Saver: Within 5 working days – FREE</p></br>
+				<p>UK Standard: Within 3 working days – £4.95 or FREE if you spend over £75</p></br>
 				<p>UK Next Day: Order by 2pm Weekdays - £6.95 or FREE if you spend over £150</p>
 			</div>
 			<div id="tab2" class="tab_content" style="display:none;">
-				<p>If you are not completely satisfied with your purchase,  simply return the item's to us in their original condition and packaging  within 28 days of receipt and we will issue a full refund (excluding  original delivery charge), or exchange the item for a different size /  colour, if preferred.</p>
+				<p>If you are not completely satisfied with your purchase,  simply return the item's to us in their original condition and packaging  within 28 days of receipt and we will issue a full refund (excluding  original delivery charge), or exchange the item for a different size /  colour, if preferred.</p></br>
 				<p><a href="#" id="retpol" title="Click here to book a collection">Click here to book a  collection in the UK for only £2.95</a></p>
 			</div>
 		</div>
@@ -165,9 +187,46 @@
  -->
  
 		 <div class="clearer"></div>
-		</div>
+		 <div id="socialicons" style="width:375px;">
+		 <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		 
+	<!--	   <a href="https://twitter.com/share" class="twitter-share-button" data-via="christophhess" data-lang="en" data-size="medium" data-count="none" data-hashtags="brands-international" >Tweet</a>
+           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> -->
+	
+ <!--    <iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=280&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:55px; height:21px;" allowTransparency="true"></iframe> -->
+
+            <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+           fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));</script>
+
+          <span class="fb-like" data-send="true" data-layout="button_count" data-width="100" data-show-faces="true" style="margin-left:10px";></span>
+
+         <!-- Place this tag where you want the +1 button to render -->
+         <g:plusone size="medium"></g:plusone>
+
+        <!-- Place this render call where appropriate -->
+     <script type="text/javascript">
+     (function() {
+     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+     po.src = 'https://apis.google.com/js/plusone.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+     </script>
+	 </div>
+		
+	</div>	
 
 	</form>
+	
+	<div id="moreviews" style="float:left;width:240px;">
+    <h3 style="font-size:14.4px; font-weight:normal;border-bottom:1px groove;">MORE FROM</h3>
+     </div>
+ 
 	
 	
 	<script type="text/javascript">
@@ -179,8 +238,10 @@
 				}
 		}.bind(productAddToCartForm);
 	//]]>
-	</script>
+	 </script>
 	</div>
+
+	
 
 	<div class="product-collateral">
 	   
