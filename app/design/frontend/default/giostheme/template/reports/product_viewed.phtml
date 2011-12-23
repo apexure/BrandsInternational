@@ -24,25 +24,25 @@
  * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php if ($_products = $this->getRecentlyViewedProducts()): ?>
-<div class="block block-recent">
+<?php //if ($_products = $this->getRecentlyViewedProducts()): ?>
+<!--<div class="block block-recent">
     <div class="block-title">
-        <h2><?php echo $this->__('Recently Viewed Products') ?></h2>
+        <h2><?php //echo $this->__('Recently Viewed Products') ?></h2>
     </div>
     <div class="block-content">
         <ol id="recently-viewed-items">
-			<?php $count=0; ?>
-			<?php foreach ($_products as $_item): ?>
-				<?php if ($count == 3) break; ?>
-				<img class="recentlyviewed" src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->constrainOnly(true)->keepAspectRatio(true)->keepFrame(false)->resize(50, 50) ?>" width="50" height="50" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" />
-				<li class="recentlyviewed"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?> <?php echo $this->getPriceHtml($_item, true) ?></a></li>
-				<?php $count++; ?>
-			<?php endforeach; ?>
+			<?php //$count=0; ?>
+			<?php //foreach ($_products as $_item): ?>
+				<?php //if ($count == 3) break; ?>
+				<img class="recentlyviewed" src="<?php //echo $this->helper('catalog/image')->init($_item, 'small_image')->constrainOnly(true)->keepAspectRatio(true)->keepFrame(false)->resize(50, 50) ?>" width="50" height="50" alt="<?php //echo $this->htmlEscape($_item->getName()) ?>" />
+				<li class="recentlyviewed"><a href="<?php //echo $_item->getProductUrl() ?>"><?php //echo $this->htmlEscape($_item->getName()) ?> <?php //echo $this->getPriceHtml($_item, true) ?></a></li>
+				<?php //$count++; ?>
+			<?php //endforeach; ?>
         </ol>
         <script type="text/javascript">decorateList('recently-viewed-items');</script>
 		<script type="text/Javascript">
 			
 		</script>
     </div>
-</div>
-<?php endif; ?>
+</div> -->
+<?php //endif; ?>
