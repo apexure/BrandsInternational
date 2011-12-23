@@ -42,94 +42,7 @@
  		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('header_img')->toHtml() ?>
 		
 		<p class="welcome-msg"><?php echo $this->getWelcome()?></p>
-		
-		
-		<script language="JavaScript1.2">
-		
-			/* var variableslide=new Array()
-
-			//variableslide[x]=["path to image", "OPTIONAL link for image", "OPTIONAL text description (supports HTML tags)"]
-
-			//variableslide[0]=['http://azamdevelopment.co.uk/gioslive/skin/frontend/default/blank/images/Adverts/advert-1.jpg', '', '']
-      variableslide[0]=['<?php //echo $this->getSkinUrl()?>images/Adverts/Weather-Delivery.jpg', '', '']
-     // variableslide[1]=['<?php //echo $this->getSkinUrl()?>images/Adverts/advert-2.jpg', '', '']
-			variableslide[1]=['<?php //echo $this->getSkinUrl()?>images/Adverts/advert-3.jpg', 'http://www.giosconcept.com/contacts/', '']
-			variableslide[2]=['<?php //echo $this->getSkinUrl()?>images/Adverts/banner-rayban.jpg', 'http://giosconcept.com/men/accessories.html?limit=all&cat=360', '']
-			variableslide[3]=['<?php //echo $this->getSkinUrl()?>images/Adverts/advert-4.jpg', '', '']
-                        
-                        variableslide[4]=['<?php //echo $this->getSkinUrl()?>images/Adverts/banner-dg.jpg', '', '']
-                        variableslide[5]=['<?php //echo $this->getSkinUrl()?>images/Adverts/banner-polo.jpg', '', '']
-                        variableslide[6]=['<?php //echo $this->getSkinUrl()?>images/Adverts/advert-Beats-Dr.Dre.jpg','','']
-                        variableslide[7]=['<?php //echo $this->getSkinUrl()?>images/Adverts/advert-Sunglasses.jpg','','']
-                        
-
-			//configure the below 3 variables to set the dimension/background color of the slideshow
-
-			var slidewidth='460px' //set to width of LARGEST image in your slideshow
-			var slideheight='70px' //set to height of LARGEST iamge in your slideshow, plus any text description
-			var slidebgcolor='#F3F3F3'
-
-			//configure the below variable to determine the delay between image rotations (in miliseconds)
-			var slidedelay=5000
-
-			////Do not edit pass this line////////////////
-
-			var ie=document.all
-			var dom=document.getElementById
-
-			for (i=0;i<variableslide.length;i++)
-			{
-				var cacheimage=new Image()
-				cacheimage.src=variableslide[i][0]
-			}
-
-			var currentslide=0
-
-			function rotateimages()
-			{
-				contentcontainer='<center>'
-				if (variableslide[currentslide][1]!="")
-					contentcontainer+='<a href="'+variableslide[currentslide][1]+'">'
-					contentcontainer+='<img src="'+variableslide[currentslide][0]+'" border="0" vspace="3">'
-				if (variableslide[currentslide][1]!="")
-					contentcontainer+='</a>'
-					contentcontainer+='</center>'
-				if (variableslide[currentslide][2]!="")
-					contentcontainer+=variableslide[currentslide][2]
-
-				if (document.layers)
-				{
-					crossrotateobj.document.write(contentcontainer)
-					crossrotateobj.document.close()
-				}
-				else if (ie||dom)
-					crossrotateobj.innerHTML=contentcontainer
-				if (currentslide==variableslide.length-1) currentslide=0
-				else currentslide++
-					setTimeout("rotateimages()",slidedelay)
-			}
-
-			if (ie||dom)
-				document.write('<div id="slidedom" style="width:'+slidewidth+';height:'+slideheight+'; position:relative;display:inline;float:left;top:20px;left:150px; margin-bottom:-value; margin-bottom:-70px;"></div>')
-
-			function start_slider()
-			{
-				crossrotateobj=dom? document.getElementById("slidedom") : ie? document.all.slidedom : document.slidensmain.document.slidenssub
-				if (document.layers)
-					document.slidensmain.visibility="show"
-					rotateimages()
-			}
-
-			if (ie||dom)
-				start_slider()
-			else if (document.layers)
-				window.onload=start_slider
-                                
-                                */
-
-		</script>
-
-		
+					
 		<div class="block block-cart" style="position: relative; display: inline; float: right; left: 40px; text-align: right; height: 100px; width: 130px;" >
 			<div class="block-content" style="position: absolute; left: 0px; top: 0px; line-height: 15px;">
                             <div id="toplinks"> 
@@ -188,23 +101,6 @@
          </div>
 
 	<div style="width:1000px;">
-   <!-- changed 24/11/10
-		<a href="http://www.giosconcept.com/delivery" >
-       <img id="uk" "name="uk" src="http://www.giosconcept.com/skin/frontend/default/blank/images/Delivery/uk-header.jpg" style="float:left;" />
-   </a>
-		<a href="http://www.giosconcept.com/international">
-    <img id="nonuk" name="nonuk" src="http://www.giosconcept.com/skin/frontend/default/blank/images/Delivery/International-header.jpg" style="float:left;" />
-    </a>
-     -->
-     <!--
-	<div id="line"></div>
-    		<a href="<?php //echo $this->getBaseUrl()?>delivery"onmouseover="setPicture('uk','Delivery/delivery-header-hover-uk.jpg')"  onmouseout="setPicture('uk','Delivery/uk-header.jpg')">
-       <img id="uk" name="uk" src="<?php // echo $this->getSkinUrl('images/Delivery/uk-header.jpg')?>" style="float:left;" />
-   </a>
-		<a href="<?php //echo $this->getBaseUrl()?>international"  onmouseover="setPicture('nonuk','Delivery/delivery-header-hover.jpg')"  onmouseout="setPicture('nonuk','Delivery/International-header.jpg')">
-    <img id="nonuk" name="nonuk" src="http://www.giosconcept.com/skin/frontend/default/blank/images/Delivery/International-header.jpg" style="float:left;" />
-    </a>
-    -->
 	  <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/style.css" rel="stylesheet" type="text/css" />
       <link href="<?php echo $this->getSkinUrl();?>ThemeTwo/home1.0/styleheader.css" rel="stylesheet" type="text/css" />
    <div id="_containerx"> 
