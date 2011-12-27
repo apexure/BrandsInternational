@@ -14,14 +14,14 @@
 			
 			#container #div1											{width:1000px;height:660px;}
 			#container #div1 #featured_box								{width:1000px;height:660px;margin:0px;overflow:hidden;}
-			#container #div1 .slide_nav									{height:23px;width:72px; position:relative;z-index:10;margin:5px auto;}
+			#container #div1 .slide_nav									{height:23px;width:73px; position:relative;z-index:10;margin:10px auto 0px;}
 			#container #div1 .slide_nav a								{background-color:#000000; color:#C8fffA;-moz-border-radius:14px;border:1px solid #666;
 																		-webkit-border-radius:14px; display:block; margin:0px 4px 0px 0px; float:left; 
 																		font-size:2px; block;height:12px; width:12px; text-decoration:none;border-radius:14px;}
 															
 			#container #div1 .slide_nav a.activeSlide					{background-color:#FFF;color:#FFF;-moz-box-shadow:0px 0px 2px #000;}
 			
-			#div2														{margin:5px 0px;overflow:hidden;}
+			#div2														{margin:30px 0px 5px;overflow:hidden;}
 			.bibox														{border:1px solid #000;width:326px; height:410px;float:left;margin:0px 8px 0px 0px;}
 			.bibox_last													{margin-right:0px!important;}			
 			.bibox .title_image											{margin:15px 0px 20px;}
