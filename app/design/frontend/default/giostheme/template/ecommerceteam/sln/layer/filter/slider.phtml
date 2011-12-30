@@ -1,0 +1,56 @@
+<?php
+    /**
+    * EcommerceTeam.com
+    *
+    * Seo Layered Navigation
+    *
+    * @category     Magento Extension
+    * @copyright    Copyright (c) 2011 Ecommerce Team (http://www.ecommerce-team.com)
+    * @author       Ecommerce Team
+    * @version      3.0
+    */
+
+
+    /** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+
+    /** @var $attribute Mage_Catalog_Model_Resource_Eav_Attribute */
+    $attribute = $this->getAttributeModel();
+    /** @var $request EcommerceTeam_Sln_Model_Request */
+    $request   = Mage::getSingleton('ecommerceteam_sln/request');
+    /** @var $helper EcommerceTeam_Sln_Helper_Data */
+    $helper = Mage::helper('ecommerceteam_sln');
+
+    $requestVar        = $this->getRequestVar();
+    $values            = $request->getValue($requestVar);
+
+    $minValue = $this->getMinPriceInt();
+    $maxValue = $this->getMaxPriceInt()+1;;
+
+    $currentStartValue = floatval(isset($values['start']) ? $values['start'] : $minValue);
+    $currentEndValue   = floatval(isset($values['end']) ? $values['end'] : $maxValue);
+
+    $nameFrom =  $requestVar . '_from';
+    $nameTo   =  $requestVar . '_to';
+
+?>
+
+<?php $this->startJavaScript(); ?>
+    <?php
+        $onChangeAction = Mage::helper('ecommerceteam_sln')->getCustomUrl($requestVar, '%'.$nameFrom.'%,%'.$nameTo.'%', true);
+        $functionName = sprintf('%sChangeValue', $requestVar);
+    ?>
+    <?php echo $functionName;?> = function() {
+        var url = "<?php echo $onChangeAction; ?>";
+        url = url.replace("%<?php echo $nameFrom;?>%", $("<?php echo $nameFrom;?>").value);
+        url = url.replace("%<?php echo $nameTo;?>%", $("<?php echo $nameTo;?>").value);
+        typeof layered != 'undefined' ? layered.setUrl(url) : setLocation(url);
+    }
+<?php $this->endJavaScript(); ?>
+
+<div id="doubleSlider_<?php echo $requestVar?>" class="tpg_railLength-<?php echo 'top' == $attribute->getNavigationGroup() ? '445' : '165';?>px sliderDiv tpgDoubleSlider  tpg_showScale-false tpg_dynamicLabel-true tpg_range-<?php echo $minValue;?>-<?php echo $maxValue;?>">
+    <input onchange="<?php echo $functionName . '();';?>" id="<?php echo $nameFrom;?>" name="<?php echo $nameFrom;?>" type="hidden" class=" tpg_labelledby-ds<?php echo $requestVar?>MinLbl tpg_defaultValue-<?php echo $currentStartValue;?>" />
+    <input onchange="<?php echo $functionName . '();';?>" id="<?php echo $nameTo;?>" name="<?php echo $nameTo;?>" type="hidden" class=" tpg_labelledby-ds<?php echo $requestVar?>MaxLbl tpg_defaultValue-<?php echo $currentEndValue;?>" />
+</div>
+<?php if(!empty($values)): ?>
+    <a class="resetfilter" href="<?php echo $helper->getRemoveUrl($requestVar);?>"><?php echo $this->__('Reset filter')?></a>
+<?php endif;?>

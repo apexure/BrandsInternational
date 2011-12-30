@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <catalog_category_layered>
+        <remove name="catalog.leftnav"/>
+
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/ecommerceteam/sln.css</stylesheet></action>
+        </reference>
+
+        <reference name="after_body_start">
+            <block type="ecommerceteam_sln/page_vars" name="ecommerceteam_sln_vars" />
+        </reference>
+
+        <reference name="left">
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view"          name="ecommerceteam_seo_navigation_left"  after="currency"  template="ecommerceteam/sln/layer/view/left.phtml" />
+        </reference>
+        <reference name="category.products">
+            <action method="setTemplate"><template>ecommerceteam/sln/category/view.phtml</template></action>
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view_top"      name="ecommerceteam_seo_navigation_top"   before="-"        template="ecommerceteam/sln/layer/view/top.phtml" />
+        </reference>
+        <reference name="right">
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view_right"    name="ecommerceteam_seo_navigation_right" before="-"        template="ecommerceteam/sln/layer/view/right.phtml" />
+        </reference>
+    </catalog_category_layered>
+    <catalogsearch_result_index>
+        <remove name="catalogsearch.leftnav"/>
+
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/ecommerceteam/sln.css</stylesheet></action>
+        </reference>
+
+        <reference name="after_body_start">
+            <block type="ecommerceteam_sln/page_vars" name="ecommerceteam_sln_vars" />
+        </reference>
+
+        <reference name="left">
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view_search"          name="ecommerceteam_seo_navigation_left"  after="currency"  template="ecommerceteam/sln/layer/view/left.phtml" />
+        </reference>
+        <reference name="search.result">
+            <action method="setTemplate"><template>ecommerceteam/sln/search/result.phtml</template></action>
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view_search_top"      name="ecommerceteam_seo_navigation_top"   before="-"        template="ecommerceteam/sln/layer/view/top.phtml" />
+        </reference>
+        <reference name="right">
+            <!-- WARNING! Block must have "ecommerceteam_seo_navigation" name prefix. -->
+            <block type="ecommerceteam_sln/layer_view_search_right"    name="ecommerceteam_seo_navigation_right" before="-"        template="ecommerceteam/sln/layer/view/right.phtml" />
+        </reference>
+    </catalogsearch_result_index>
+</layout>

@@ -1,0 +1,43 @@
+<?php
+    /**
+    * EcommerceTeam.com
+    *
+    * Seo Layered Navigation
+    *
+    * @category     Magento Extension
+    * @copyright    Copyright (c) 2011 Ecommerce Team (http://www.ecommerce-team.com)
+    * @author       Ecommerce Team
+    * @version      3.0
+    */
+
+
+/** @var $this EcommerceTeam_Sln_Block_Layer_View */
+?>
+<?php if($this->canShowBlock()): ?>
+<div id="<?php echo $this->getBlockId();?>" class="block block-layered-nav">
+    <div class="block-content">
+        <?php echo $this->getStateHtml() ?>
+        <?php if($this->canShowOptions()): ?>
+            <dl id="narrow-by-list-top">
+                <?php $_filters = $this->getFilters() ?>
+                <?php foreach ($_filters as $_filter):?>
+                <?php if($_filter->canShow()):?>
+                    <dt>
+                        <span><?php echo $this->__($_filter->getName()) ?></span>
+                        <?php if($filterComment = $_filter->getComment()):?>
+                        <img onmouseover="showFilterComment('<?php echo $_filter->getRequestVar()?>', this)"
+                              onmouseout="hideFilterComment('<?php echo $_filter->getRequestVar()?>', this)"
+                              class="filter-details"
+                              src="<?php echo $this->getSkinUrl('images/ecommerceteam/sln/help.png')?>"
+                              alt="Filter Details" />
+                        <?php endif;?>
+                    </dt>
+                    <dd><?php echo $_filter->getHtml() ?></dd>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </dl>
+            <script type="text/javascript">decorateDataList('narrow-by-list-top')</script>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>

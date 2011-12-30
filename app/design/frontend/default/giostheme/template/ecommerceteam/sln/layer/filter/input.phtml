@@ -1,0 +1,46 @@
+<?php
+    /**
+    * EcommerceTeam.com
+    *
+    * Seo Layered Navigation
+    *
+    * @category     Magento Extension
+    * @copyright    Copyright (c) 2011 Ecommerce Team (http://www.ecommerce-team.com)
+    * @author       Ecommerce Team
+    * @version      3.0
+    */
+
+
+    /** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+    /** @var $attribute Mage_Catalog_Model_Resource_Eav_Attribute */
+    $attribute = $this->getAttributeModel();
+    /** @var $request EcommerceTeam_Sln_Model_Request */
+    $request   = Mage::getSingleton('ecommerceteam_sln/request');
+    /** @var $helper EcommerceTeam_Sln_Helper_Data */
+    $helper = Mage::helper('ecommerceteam_sln');
+
+    $requestVar        = $attribute->getAttributeCode();
+    $values            = $request->getValue($requestVar);
+    $currentStartValue = isset($values['start']) ? $values['start'] : '';
+    $currentEndValue   = isset($values['end']) ? $values['end'] : '';
+?>
+<div class="sln-type-input">
+    <form onsubmit="layered.setUrl('<?php echo $this->getUrl('*/*/*', array('_current'=>true, '_use_rewrite'=>true, '_query'=>array('ajax'=>1)))?>', 'get', {<?php echo $requestVar;?>_from:this.elements['<?php echo $requestVar;?>_from'].value, <?php echo $requestVar;?>_to:this.elements['<?php echo $requestVar;?>_to'].value});return false;" action="" method="post">
+        <fieldset class="filter-fieldset">
+            <div class="fields">
+                <div class="from-wrapper">
+                    <label><span><?php echo $this->__('From')?>:</span><input class="input-text" type="text" name="<?php echo $requestVar;?>_from" value="<?php echo $currentStartValue;?>" /></label>
+                </div>
+                <div class="from-wrapper">
+                    <label><span><?php echo $this->__('To')?>:</span><input class="input-text" type="text" name="<?php echo $requestVar;?>_to" value="<?php echo $currentEndValue;?>" /></label>
+                </div>
+            </div>
+            <div class="button-set">
+                <button class="button" type="submit"><span><span><?php echo $this->__('Filter')?></span></span></button>
+                <?php if(!empty($values)): ?>
+                    <a class="resetfilter" href="<?php echo $helper->getRemoveUrl($requestVar);?>"><?php echo $this->__('Reset filter')?></a>
+                <?php endif;?>
+            </div>
+        </fieldset>
+    </form>
+</div>

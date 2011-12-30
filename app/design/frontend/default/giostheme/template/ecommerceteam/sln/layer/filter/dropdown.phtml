@@ -1,0 +1,25 @@
+<?php
+    /**
+    * EcommerceTeam.com
+    *
+    * Seo Layered Navigation
+    *
+    * @category     Magento Extension
+    * @copyright    Copyright (c) 2011 Ecommerce Team (http://www.ecommerce-team.com)
+    * @author       Ecommerce Team
+    * @version      3.0
+    */
+
+
+/** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+?>
+<select onchange="!this.value || setLocation(this.value);">
+    <option value="<?php echo $this->getRemoveUrl();?>"><?php echo $this->__('All')?></option>
+<?php
+    /** @var $_item EcommerceTeam_Sln_Model_Layer_Filter_Item */
+    foreach ($this->getAllItems() as $_item):?>
+    <option <?php echo $_item->getCount() == 0 ? 'disabled="disabled"' : ''?> <?php if($_item->getIsSelected()):?> selected="selected" <?php endif;?> value="<?php echo $this->urlEscape($_item->getUrl(true)) ?>">
+        <?php echo $_item->getLabel() ?>
+    </option>
+<?php endforeach ?>
+</select>

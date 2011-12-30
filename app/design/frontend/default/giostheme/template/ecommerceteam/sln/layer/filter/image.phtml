@@ -1,0 +1,48 @@
+<?php
+    /**
+    * EcommerceTeam.com
+    *
+    * Seo Layered Navigation
+    *
+    * @category     Magento Extension
+    * @copyright    Copyright (c) 2011 Ecommerce Team (http://www.ecommerce-team.com)
+    * @author       Ecommerce Team
+    * @version      3.0
+    */
+
+
+/** @var $this EcommerceTeam_Sln_Block_Layer_Filter_Attribute */
+
+    /** @var $advancedOptionCollection EcommerceTeam_Sln_Model_Resource_Eav_Mysql4_Attribute_Collection */
+    $advancedOptionCollection = $this->getAdvancedOptionCollection();
+    /** @var $helper EcommerceTeam_Sln_Helper_Data */
+    $helper = Mage::helper('ecommerceteam_sln');
+    $attributeId = $this->getAttributeModel()->getAttributeId();
+?>
+<ol class="sln-type-image">
+<?php
+    /** @var $_item EcommerceTeam_Sln_Model_Layer_Filter_Item */
+    foreach ($this->getAllItems() as $_item): ?>
+    <li>
+        <?php $optionData = $advancedOptionCollection->getItemByColumnValue('option_id', $_item->getValue()); ?>
+        <?php if ($_item->getCount() > 0 && !$_item->getIsSelected()):?>
+        <a title="<?php echo $_item->getLabel() ?>" href="<?php echo $this->urlEscape($_item->getUrl()) ?>">
+            <?php if($optionData && $imageUrl = $helper->getOptionImageUrl($optionData->getImage(), $attributeId, $_item->getValue())):?>
+            <img src="<?php echo $imageUrl;?>" alt="<?php echo $_item->getLabel() ?>" />
+            <?php else:?>
+            <?php echo $_item->getLabel() ?>
+            <?php endif;?>
+        </a>
+        <?php // echo $_item->getCount() ?>
+        <?php else: ?>
+            <a title="<?php echo $this->__('Remove')?>: <?php echo $_item->getLabel() ?>" class="checked" href="<?php echo $this->urlEscape($_item->getRemoveUrl()) ?>">
+            <?php if($optionData && $imageUrl = $helper->getOptionImageUrl($optionData->getImage(), $attributeId, $_item->getValue())):?>
+            <img src="<?php echo $imageUrl;?>" alt="<?php echo $_item->getLabel() ?>" />
+            <?php else:?>
+            <?php echo $_item->getLabel() ?>
+            <?php endif;?>
+            </a>
+        <?php endif;?>
+    </li>
+<?php endforeach ?>
+</ol>
