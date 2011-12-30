@@ -2147,7 +2147,7 @@ left:32px;
 *left:-310px;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { /* hacked for chrome and safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* for chrome and safari */
 #searchgo { top:2px; left:-310px; }
 }
 
