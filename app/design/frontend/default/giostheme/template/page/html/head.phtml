@@ -28,7 +28,7 @@
 <!--Metadata-->
 <meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="description" content="<?php echo html_entity_decode($this->getDescription()) ?>" />
 <meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
 <!-- Google Site Verfication Code -->
