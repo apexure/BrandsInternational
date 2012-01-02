@@ -36,7 +36,7 @@
 </form>
 <div style="position:relative; display:block; width:100%; margin-top:20px;">
 	<script language="JavaScript" TYPE="text/javascript" src="https://smarticon.geotrust.com/si.js">check</script>
-	<a href="../terms#payment"><img src="http://azamdevelopment.co.uk/gioslive/skin/frontend/default/blank/images/checkout/paymenttypes.jpg" alt="accepted payment methods" /></a>
+	<a href="<?php echo $this->getBaseUrl()?>terms#payment"> <img  src="<?php  echo $this->getSkinUrl('images/checkout/paymenttypes.jpg')?>" alt="accepted payment methods" /></a>
 </div> 	
 <div class="tool-tip" id="payment-tool-tip" style="display:none;">
     <div class="btn-close"><a href="#" id="payment-tool-tip-close"><img src="<?php echo $this->getSkinUrl('images/btn_window_close.gif') ?>" alt="<?php echo $this->__('Close') ?>" title="<?php echo $this->__('Close') ?>" /></a></div>
