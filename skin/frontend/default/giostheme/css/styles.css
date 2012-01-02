@@ -884,7 +884,7 @@ a.minimal-price-link .price { font-weight:normal; }
 .grouped-items {}
 
 /* Block: Description */
-.product-view .description .std {color:#666666;font-size:.9em; line-height:122%;margin-top:8px;margin-bottom:20px;}
+.product-view .description .std {color:#666666;/*font-size:.9em;*/ line-height:122%;margin-top:8px;margin-bottom:20px;}
 
 /* Block: Additional */
 .product-view .additional {}
@@ -1675,7 +1675,7 @@ div.categoryContent
 	float: left; 
 	width: 338px;
 	*width: 339px;
-	height:110px;
+/*	height:110px; */
 	font-size:.7em;
 	top:-3px;
 	border:1px solid #CCCCCC;
